@@ -1,0 +1,228 @@
+% Chap wave motion
+\chapter[Þyngdarlögmál]{Þyngdarlögmál Newtons}
+Hlutir með massa verka á hvorn annan með þyngdarkrafti, þar á meðal verka
+plánetur á sólina og sólin á plánetur. Nánar tiltekið massar verka jafnt á
+hvorn annan. Það er ekki ennþá búið að útskýra afhverju massar geta
+verkað með þyngdarkrafti en það er búið að lýsa því \emph{hvernig}
+mjög vel. Eitt af efnisgreinum Newtons var að lýsa því hvernig
+plánetur hreyfast undir áhrifum þyngdarkrafta. Sem hluti af þeirri lýsingu
+þarf að koma með fasta sem er kallaður þyngdarfastinn $\ugravconstant$.
+Stærðin sem Newton kom er
+\begin{equation}
+	\uforce = \ugravconstant \frac{\umassm \umassM}{\ulengthr^2}
+\end{equation}
+þeas. krafturinn milli tveggja massa breytist í öfugri ferningsstærð
+vegalengdarinnar. Það er mikið til að byrja með, en þetta er
+óvenju saklaus jafna þegar uppi er staðið.
+
+\begin{formalexample}
+Tveir loftsteinar eru á floti í geimnum, annar hefur massan 2 tonn og hinn hefur
+massan 4 tonn, hver er þyngdarkrafturinn á milli þeirra þegar þeir eru $3 \ukilo\umeter$
+frá hvor öðrum?
+\\[4 ex]
+Þá er krafturinn á milli steinana
+\begin{align*}
+	\uforce &= \ugravconstant \frac{\umassm \umassM}{\ulengthr^2} \\
+		&= \ugravconstantnmkg \cdot \frac{ 2000 \ukilo\ugramm \cdot 3000 \ukilo\ugramm}{\left( 3000\umeter \right)^2} \\
+		&= \uEE{4,45}{-11} \unewton
+\end{align*}
+\end{formalexample}
+
+\begin{formalexample}
+Hver er krafturinn sem jörðin verkar á $50 \ukilo\ugramm$ persónu við yfirborð
+jarðar?
+Radíus jarðar er $\uEE{6.37}{6} \umeter$ og massi jarðar er $\uEE{6}{24} \umeter$.
+\\[4 ex]
+Þá er krafturinn jörðin verkar með
+\begin{align*}
+	\uforce &= \ugravconstant \frac{\umassm \umassM}{\ulengthr^2} \\
+		&= \ugravconstantnmkg 
+			\cdot \frac{ 50 \ukilo\ugramm \cdot 
+				\uEE{5,97}{24} \ukilo\ugramm}{\left( \uEE{6,731}{6} \umeter \right)^2} \\
+		&= 490 \unewton
+\end{align*}
+\end{formalexample}
+
+\section{Stefna þyngdarkrafts}
+Lögmál Newtons gefur til um stærð þyngdarkraftsins en hins vegar kemur ekki með
+lýsingu á rúmlegri uppsetningu. Þá er ekki mikið sagt annað en
+að krafturinn aðdráttarkraftur. Þá verkar þyngdarkraftur á báða hlutina
+og báðir togast að hvor öðrum. Til að lýsa því er hægt að bæta við
+vigur formi af þyngdarlögmálinu
+\begin{equation}
+	\bar\uforce
+		= \ugravconstant \frac{\umassm \umassM}{\left|\ulengthr\right|^2} \hat \ulengthr
+\end{equation}
+þar sem $\hat \ulengthr$ er stefnuvigur af stærðinni $1$ sem miðar alltaf í átt
+að gagnstæðum massa og $\left|\ulengthr\right|$ er vegalengdin á milli massanna.
+Síðan er hægt að hafa marga massa sem verka á einn hlut, þá þarf fara út í
+nokkuð langa útreikininga.
+
+\begin{formalexample}
+Á milli tveggja loftsteina er massi $\umassm$ sem er $20 \ukilo\ugramm$, loftsteinn
+A hefur massann $\umassM_\text{A} = 3000 \ukilo\ugramm$ og loftsteinn B hefur massann
+$\umassM_\text{B} = 2000 \ukilo\ugramm$. Vegalengdin á milli A og B er 
+$\ulengthr_\text{A} = 1500 \umeter$ og $\ulengthr_\text{B} = 2000 \umeter$.
+Hver er krafturinn sem verkar á massan $\umassm$
+\\[4 ex]
+Þá er krafturinn á milli loftsteina A og massa
+\begin{align*}
+	\uforce_\text{A,m} &= \ugravconstant \frac{\umassm \umassM}{\ulengthr^2} \\
+		&= \ugravconstantnmkg \cdot \frac{ 20 \ukilo\ugramm \cdot 3000 \ukilo\ugramm}{\left( 1500\umeter \right)^2} \\
+		&= \uEE{1,78}{-12} \unewton
+\end{align*}
+og á milli loftsteins B og massans
+\begin{align*}
+	\uforce_\text{B,m} &= \ugravconstant \frac{\umassm \umassM}{\ulengthr^2} \\
+		&= \ugravconstantnmkg \cdot \frac{ 20 \ukilo\ugramm \cdot 2000 \ukilo\ugramm}{\left( 2000\umeter \right)^2} \\
+		&= \uEE{6,67}{-13} \unewton
+\end{align*}
+þá er heildarkrafturin sem verkar á massan
+\begin{align*}
+	\uforce_\text{heild} &= -\uforce_\text{A,m} + \uforce_\text{B,m} \\
+		&= -\uEE{1,78}{-12} \unewton + \uEE{6,67}{-13} \unewton \\
+		&= -\uEE{1,11}{-12} \unewton
+\end{align*}
+neikvætt formerki hér táknar að krafturinn sem verkar á massan stefni á loftstein A.
+\end{formalexample}
+\begin{formalexample}
+Þrír massar (A, B og C) eru allir í láréttu plani, og mynda jafnhliða þríhyrning. Hliðar
+þríhyrningins eru $5 \ukilo\umeter$, massar A og B eru $4000 \ukilo\ugramm$ á meðan
+massi C er $6000 \ukilo\ugramm$. Hver er stefna og stærð kraftsins sem verkar á
+massa C?
+\\[4 ex]
+Valið er að setja massan C í toppinn á þríhyrningnum, þá er heildarkrafturinn sem
+verkar á C
+\[
+	\bar\uforce_\text{C} = \bar\uforce_\text{A,C} + \bar\uforce_\text{B,C}
+\]
+þyngdarkrafturinn á milli A og C er
+\begin{align*}
+	\bar\uforce_\text{A,C} &= \ugravconstantnmkg \cdot
+		\frac{4000 \ukilo\ugramm \cdot 6000 \ukilo\ugramm}{\left|5000 \umeter\right|^2} \hat \ulengthr_\text{A,C} \\
+	&= \uEE{6,40}{-11} \unewton \cdot 
+		\begin{bmatrix}
+			-\cos(30 \udeg) \\[0.3em]
+			-\sin(30 \udeg) 
+		\end{bmatrix} \\
+	&=	\begin{bmatrix}
+			- \uEE{5,54}{-11} \unewton \\[0.3em]
+			- \uEE{3,20}{-11} \unewton
+		\end{bmatrix}
+\end{align*}
+þyngdarkrafturinn á milli B og C er
+\begin{align*}
+	\bar\uforce_\text{B,C} &= \ugravconstantnmkg \cdot
+		\frac{4000 \ukilo\ugramm \cdot 6000 \ukilo\ugramm}{\left|5000 \umeter\right|^2} \hat \ulengthr_\text{B,C} \\
+	&=	\begin{bmatrix}
+			\uEE{5,54}{-11} \unewton \\[0.3em]
+			- \uEE{3,20}{-11} \unewton
+		\end{bmatrix}
+\end{align*}
+sem gefur heildarkraftinn
+\begin{align*}
+	\bar\uforce_\text{C} &= \bar\uforce_\text{A,C} + \bar\uforce_\text{B,C} \\
+		&= 
+		\begin{bmatrix}
+			- \uEE{5,54}{-11} \unewton \\[0.3em]
+			- \uEE{3,20}{-11} \unewton
+		\end{bmatrix}
+		+
+		\begin{bmatrix}
+			\uEE{5,54}{-11} \unewton \\[0.3em]
+			- \uEE{3,20}{-11} \unewton
+		\end{bmatrix} \\
+		&= 
+		\begin{bmatrix}
+			- \uEE{5,54}{-11} \unewton + \uEE{5,54}{-11} \unewton \\[0.3em]
+			- \uEE{3,20}{-11} \unewton - \uEE{3,20}{-11}  \unewton
+		\end{bmatrix}\\
+		&= 
+		\begin{bmatrix}
+			0 \unewton \\[0.3em]
+			- \uEE{6,40}{-11} \unewton
+		\end{bmatrix}
+\end{align*}
+sem þýðir að stærð kraftsins er
+\[
+	\left|\bar\uforce_\text{C} \right| 
+		= \sqrt{\left(0 \unewton\right)^2 + \left(-\uEE{6,40}{-11} \unewton\right)^2}
+		= \uEE{6,40}{-11} \unewton
+\]
+\end{formalexample}
+
+
+\section{Þyngdarsvið}
+Skilgreining á þyngdarsviði er kraftur per kílógramm, við yfirborð jarðar svarar
+það til þyngdarhröðunar
+\begin{equation}
+	\bar\ugravfield =  \frac{\uforce}{\umassm} 
+		= \ugravconstant \frac{\umassM}{\left|\ulengthr\right|^2} \hat \ulengthr
+\end{equation}
+einingin fyrir þyngdarsvið er hröðun, en hins vegar þykir það betra að nota
+$\frac{\unewton}{\ukilo\ugramm}$ til að hafa lýsingu sem tengist kraftinum sem
+verkar á massann. Nánar tiltekið er massinn kallaður prufumassi, sem hugtak er
+það massi sem verður fyrir verkun annara massa án þess að breyta
+skipulagi kerfisins. Seinna meir mun hugtakið prufuhleðsla koma á sama máta
+fram til lýsa krafti per hleðslu sem verkar á hlut.
+
+Annar eiginleiki er að hægt er að leggja saman þyngdarsvið á sama máta eins
+og hægt er að leggja saman krafta sem verka á einn hlut. Í einvíðu samhengi
+þá er það fremur fljótgert en þegar komið er upp í tvær eða fleiri
+rúmvíddir verður reiknivinnan talsvert þyngri.
+
+\section{Orka í þyngdarsviði}
+Aukin í stöðuorku er einfaldlega heildin af kraftinum yfir þá vegalengd sem
+hluturinn færist yfir. Almennt er hægt að segja vinnan sé
+\[
+	\uworkw = \int_{\ulengthr_1}^{\ulengthr_2} \uforce d\ulengthr
+\]
+eða gefur að
+\begin{align*}
+	\uworkw &= \int_{\ulengthr_1}^{\ulengthr_2} 
+		\ugravconstant \frac{\umassm \umassM}{\ulengthr^2} d\ulengthr \\
+		&= \ugravconstant \umassm \umassM 
+			\int_{\ulengthr_1}^{\ulengthr_2} \frac{d\ulengthr}{\ulengthr^2} \\
+		&= \ugravconstant \umassm \umassM 
+			\left[ - \frac{1}{\ulengthr} \right]_{\ulengthr_1}^{\ulengthr_2} \\
+		&= \ugravconstant \umassm \umassM 
+			\left( \frac{1}{\ulengthr_1} - \frac{1}{\ulengthr_2} \right)
+\end{align*}
+til að lýsa því hversu mikla orku þarf til að losa sig algjörlega undan áhrifum
+þyngdarsviðs frá hlut þá er hægt að láta byrjunar punkti vera óendanlega langt
+frá upphafspunt og síðan verður massinn $\umassm$ færður nær og nær þar til hann
+nær stöðunni $\ulengthr$ sem gefur
+\begin{align*}
+	\uworkw &= \ugravconstant \umassm \umassM 
+			\left( \frac{1}{\ulengthr_1} - \frac{1}{\ulengthr_2} \right) \\
+		&= \ugravconstant \umassm \umassM 
+			\left( \frac{1}{\infty} - \frac{1}{\ulengthr} \right) \\
+		&\approx -\frac{\ugravconstant \umassm \umassM}{\ulengthr}
+\end{align*}
+neikvætt formerki hérna táknar að massinn hefur tapað orkunni í fallinu en hins
+vegar þá myndi það kost nákvæmlega jafn mikið af orku til að komast óendanlega
+langt frá stöðunni $\ulengthr$. Hugmyndin verður þá að miðað við núllpunkt sem
+er óendanlega langt frá er hægt að finna hlutfallslega breytingu í stöðuorku miðað
+við óendanlega punktinn. Tap hér, er tap af stöðuorku hlutarins.
+
+\begin{formalexample}
+Hver er stöðuorka hlutars sem er $400 \ukilo\umeter$ yfir jörðu og hefur
+massann $200 \ukilo\ugramm$? Áætla má að hluturinn hafi byrjað við yfirborð jarðar.
+\\[4 ex]
+Þá er aukningin í stöðuorku miðað við núll punkt í óendanlegu
+\begin{align*}
+	\Delta \upotentialu &= \upotentialu_2 - \upotentialu_1 \\
+		&= -\frac{\ugravconstant \umassm \umassM}{\ulengthr_2}
+			+ \frac{\ugravconstant \umassm \umassM}{\ulengthr_1} \\
+		&= -\frac{\ugravconstant \umassm \umassM}{\ulengthr_2}
+			+ \frac{\ugravconstant \umassm \umassM}{\ulengthr_1} \\
+		&= \ugravconstant \umassm \umassM \left(-\frac{1}{\ulengthr_2}
+			+ \frac{1}{\ulengthr_1}  \right) \\
+		&= \ugravconstantnmkg \cdot 200 \ukilo\ugramm \cdot \uEE{6,0}{24} \ukilo\ugramm \\
+		&\ldots \cdot \left(-\frac{1}{\uEE{6,77}{6} \umeter}
+			+ \frac{1}{\uEE{6,37}{6} \umeter}  \right) \\
+		&= \uEE{7,42}{8} \ujoule
+\end{align*}
+Það er mun heppilegra að vinna núllpunkt í óendanlegu einmitt uppá að
+geta skoða breytingar án þess að miða við miðju þyngdarsviðins.
+\end{formalexample}

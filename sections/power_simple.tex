@@ -1,0 +1,65 @@
+% Afl
+\section{Afl}
+Afl er einfaldlega orka á tímaeiningu, eða í meira hefðbundnu máli, Joule á sekúndu
+$\si{\J\per\s}$ sem hefur SI-eininguna Watt sem er $\si{\W}$. 
+Skilgreining á afli er
+\begin{equation}
+	\upower = \frac{\uworkw}{\Delta\utime}
+\end{equation}
+almennt er $\uworkw$ vinnan sem var framkvæmd á tímabilinu $\Delta\utime$. Sem
+er magnið af orku notað deilt tímanum sem það tók. Sambærilegt form af því að segja
+að hraði sé hversu langt var ferðast deilt með tímanum sem það tók.
+%
+\begin{formalexample}
+Pumpa sem dælir vatni upp úr brunni sem er $\SI{10}{\m}$ djúpur nær að dæla $\SI{5}{\m\cubed}$
+á $\SI{3}{\minute}$. Hver er afl dælunnar?
+\\[4 ex]
+Eðlismassinn fyrir vatn er $\SI{1000}{\kg\per\m\cubed}$, sem þýðir að samanlagður massi
+vatnsins er $\SI{5e3}{\kg}$, orkan sem fór lágmark í að færa vatnið upp um $\SI{10}{\m}$
+er
+\[
+	\uworkw = \umass \uacceleg \Delta\ulengthh
+		= \SI{5e3}{\kg} \times \SI{9.8}{\m\per\s\squared} \times \SI{10}{\m}
+		= \SI{490}{\kJ}
+\]
+þá er aflið sem dælan gaf á meðan hún dældi vatninu
+\[
+	\upower = \frac{\uworkw}{\Delta\utime}
+		= \frac{ \SI{490000}{\J} }{ \SI{180}{\s} }
+		= \SI{2.7}{\kW}
+\]
+\end{formalexample}
+
+
+\subsection{Nýtni afls}
+Það er hægt að bera saman hversu vel aflið er notað til þess sem áætlað er, hversu góð
+nýtingin er táknuð með stærðinni $\eta$. Þetta svipar til núningsstuðulsins, er 
+prósentuhlutfallið sem er hægt að nýta. Nýtni er gefin við
+\begin{equation}
+	\eta = \frac{\upower_\text{út}}{\upower_\text{inn}}
+\end{equation}
+þá er átt við að $\upower_\text{inn}$ er aflið gefið og $\upower_\text{út}$ er aflið sem
+fór í að áætlað verk. Ber að athuga að nýtni liggur á milli $0$ og $1$, þ.e.a.s. $0 \%$ og
+$100\%$ nýtingu.
+
+\begin{formalexample}
+Mótor sem dregur upp lyftu með farþegum er skráður til að hafa aflið $\SI{8}{\kW}$,
+samanlagður massi lyftu og farþega er $\SI{800}{\kg}$ og mótorinn dregur lyftuna upp
+$\SI{12}{\m}$ á $\SI{15}{\s}$. Hver er nýtni mótorsinns
+\\[4 ex]
+Aflið sem fer í að hífa lyftuna séð út frá vélrænni orku er
+\[
+	\upower_\text{út} 
+		= \frac{\umass \uacceleg \Delta\ulengthh}{\Delta\utime}
+		= \frac{ \SI{800}{\kg} \times \SI{9.8}{\m\per\s\squared}
+			\times \SI{12}{\m} }{ \SI{15}{\s} }
+		= \SI{6272}{\W} \approx \SI{6.3}{\kW}
+\]
+sem gefur að nýtni mótorsinns til að hífa lyftuna upp er
+\[
+	\eta = \frac{ \SI{6.3}{\kW} }{ \SI{8}{\kW} } 
+		= \num{0.79}
+\]
+þ.e.a.s. það fer $79\%$ af aflinu frá mótorinnum í að toga lyftuna upp á meðan $21 \%$ af aflinu
+fer mótstöðukrafta eða núning.
+\end{formalexample}

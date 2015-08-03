@@ -1,0 +1,107 @@
+\chapter{Straumur}
+% Intro to chapter, laws of force
+Þegar rafeindir ferðast í leiðurum þá myndast rafstraumur, eða einfaldlega
+straumur. Vatnsstraumur er t.d. vatnsmagn á tímaeiningu, oft lýst sem
+massi per tímaeingu $\frac{\ukilo\ugramm}{\usec}$. Á svipaðan máta 
+er straumur gefinn sem $\frac{\ucoulomb}{\usec}$, þar sem $\ucoulomb$ er
+,,magnið'' af rafmagni (svipar til massa). Einingin sem er notuð fyrir
+straum er Amperé\footnote{Fengið frá
+\url{http://en.wikipedia.org/wiki/Andr\%C3\%A9-Marie_Amp\%C3\%A8re}}
+($\uamper$) sem er það sama og að segja $\uampercs$.
+\marginpar{
+	\begin{center}
+	\includegraphics*[
+		width= \marginparwidth
+		]{./pictures/Ampere_Andre_1825.eps}
+	\end{center}
+	André-Marie Amperé(1775-186) var franskur 
+	vísindamaður sem gerði tilraunir með
+	rafkrafta í rafmagnsleiðurum.
+	}
+
+
+\section{Hleðsla og rafeindir}
+% Examples of size, direction
+Hleðsla sem stærð er eitthvað sem sumar eindir búa yfir sem eiginleiki,
+þetta er svipað og sumar eindir hafa massa (t.d. $\ukilo\ugramm$). Það
+eru ekki allar eindir sem búa yfir massa, ljós er massalaus eind á meðan
+rafeindin hefur massa. Hleðsla er ,,form'' af massa, eitthvað sem sumar
+eindir hafa og aðrar ekki, í þessum kafla eru bara rafeindir, jáeindir
+og róteindir með hleðslu. Það eru talsvert fleiri eindir sem bera hleðslu
+á sama máta og það eru til talsvert fleiri eindir sem hafa massa. Þá
+er \emph{grunnhleðsla} hugtak sem er viðmiðunarpunktur af hleðslu.
+Grunnhleðslan er
+\begin{align}
+	\uelementcharge &= \uEE{1,602}{-19} \ucoulomb
+\end{align}
+sem er jafn stór og hleðslan og ein rafeind, jáeind eða róteind hefur.
+\begin{table}[!h]
+	\begin{center}
+	\begin{tabular}{ccc}
+	\toprule
+	Heiti & Tákn & Hleðsla \\
+	\midrule
+	Rafeind  & $\uelectron$ & $-\uelementcharge$ \\
+	Jáeind  & $\upositron$ & $+\uelementcharge$ \\
+	Róteind  & $\uproton$ & $+\uelementcharge$ \\
+	\bottomrule
+	\end{tabular}
+	\end{center}
+	\caption{Yfirlit yfir hleðslu frumeinda}
+\end{table}
+\begin{formalexample}
+Hvað eru margar rafeindir í einu kúlombi?
+\\[4 ex]
+Þegar grunnhleðslan per rafeind er
+\[
+	\uelementcharge = \uEE{1,602}{-19} \frac{\ucoulomb}{\text{rafeind}}
+\]
+þá er fjöldi rafeinda
+\begin{align*}
+	\text{fjöldi} =
+		\frac{ 1 \ucoulomb}{\uEE{1,602}{-19} \frac{\ucoulomb}{\text{rafeind}} }
+	= \uEE{6,242}{18} \text{rafeindir}
+\end{align*}
+sem er talsverður fjöldi rafeinda. Almennt er eitt $\ucoulomb$ fremur stór stærð
+af rafeindum en þegar við mælum straum er hún hentugri til en fjöldi rafeinda.
+\end{formalexample}
+
+\section{Straumur}
+% Current
+Straumur er þegar hleðsla (sem geta verið rafeindir) færist á milli staða, færsla
+á hleðsu myndar strauminn en annað hugatak sem kallast spenna sér um að ýta
+hleðslunni áfram. Til samanburðar er hægt að ímynda sér að hleðsa sé vatn og
+þyngdarkrafturinn sé spennan sem togar vatnið áfram. Einingin fyrir straum er
+$\uamper$ eða $\uampercs$, SI-einingin er samt $\uamper$ er oftast gefinn upp.
+Þá er straumur gefinn við
+\begin{align}
+	\ucurrenti &= \frac{\Delta\uchargeQ}{\Delta\utime}
+\end{align}
+þar sem er $\Delta\uchargeQ$ magnið af hleðslu sem hefur fengið færslu á 
+tímabilinu $\Delta\utime$.
+\begin{formalexample}
+Mjög þolinmóður talningsmaður hefur talið að í $1\ugramm$ af kopari eru
+$\uEE{1,5}{20}$ rafeindir sem geta fært sig. Hann tengir vír við 
+koparinn (undir spennu) og mælir strauminn $5 \umilli\uamper$. Hvað tekur það
+langan tíma að færa allar rafeindirnar úr koparinum?
+\\[4 ex]
+Þegar grunnhleðslan per rafeind er
+\[
+	\uelementcharge = \uEE{1,602}{-19} \frac{\ucoulomb}{\text{rafeind}}
+\]
+þá er heildarhleðslan
+\begin{align*}
+	\Delta\uchargeQ &=
+		\uEE{1,602}{-19} \frac{\ucoulomb}{\text{rafeind}} \cdot
+		\uEE{1,5}{20} \text{rafeindir}
+	&= 24,03 \ucoulomb
+\end{align*}
+hægt er að umskrifa straumjöfnuna til að vera
+\begin{align*}
+	\Delta\utime &= \frac{\Delta\uchargeQ}{\ucurrenti}
+		&= \frac{24,03 \ucoulomb}{\uEE{5}{-3} \uamper}
+		&= 4806 \usec = 80 \umin
+\end{align*}
+ef spennan yrði aukin myndi tíminn minnka, samsvarar að nota stærri kraft til að
+hreyfa rafeindirnar.
+\end{formalexample}

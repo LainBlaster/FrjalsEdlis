@@ -1,0 +1,236 @@
+% Chap projectile motion
+\chapter{Kasthreyfing}
+Í fyrri köflum hefur verið skoðað hvernig hlutir falla í frjálsu falli, núna er markmiðið
+að skoða hvernig hlutur hagar sér í skákasti. Það er fyrst að skoða hvernig krafturinn
+sem verkar á hlut er í frjálsu falli. Hann er
+\[
+	\bar\uforce 
+		= 
+		\umass
+		\left( 
+			\begin{array}{c}
+				0 \\
+				- \uacceleg \\
+			\end{array}
+		\right)
+\]
+s.s. það er enginn kraftur sem reynir að toga hlutinn áfram á meðan hann er í skákastinu.
+Fyrir svona hlut er heildarkrafturinn einungis þyngdarkraftur, sem gefur
+\[
+	\bar\uforce_\text{heild}
+		= 
+		\umass
+		\left( 
+			\begin{array}{c}
+				0 \\
+				- \uacceleg \\
+			\end{array}
+		\right)
+		=
+		\umass
+		\bar\uaccelea
+	\Leftrightarrow
+	\bar\uaccelea
+		= 
+		\left( 
+			\begin{array}{c}
+				0 \\
+				- \uacceleg \\
+			\end{array}
+		\right)
+\]
+Þá er hægt að skrifa hraða hlutarins meðfram sitthvorum ásnum til að vera
+\[
+	\bar\uspeed 
+		= 
+		\left( 
+			\begin{array}{c}
+				\uspeed_\text{x} \\
+				\uspeed_\text{y} - \uacceleg \utime \\
+			\end{array}
+		\right)
+\]
+þar sem $\uspeed_\text{x}$ og $\uspeed_\text{y}$ eru upphafshraðar meðfram x og y ásum
+hnitakerfisins. Áframhaldið er að vita hver er staðsetning hlutarins eftir ákveðinn
+langan tíma. Sem gefur að
+\[
+	\bar\ulengths 
+		= 
+		\left( 
+			\begin{array}{c}
+				\uspeed_\text{x} \utime \\
+				\uspeed_\text{y} \utime - \frac{1}{2} \uacceleg \utime^2 \\
+			\end{array}
+		\right)
+\]
+s.s. út kemur að staðsetning hlutarins er einungis háð tíma
+sem hefur liðið frá upphafspunkti. Í meira almennu formi er hægt að bæta við færslu
+frá upphafstaðsetningu. Sem gefur
+\begin{align}
+	\bar\ulengths 
+		= 
+		\left( 
+			\begin{array}{c}
+				\uspeed_\text{x} \utime \\
+				\uspeed_\text{y} \utime - \frac{1}{2} \uacceleg \utime^2 \\
+			\end{array}
+		\right)
+	+
+	\bar\ulengths_0
+\end{align}
+þar sem $\bar\ulengths_0$ er færsla frá upphafsstaðsetningu hnitakerfisins. Síðan
+er hægt að setja upp ýmsar tilraunir sem fiina upphafshraða og
+stefnu hlutarins í kastihreyfingunni. Líka er hægt að skrifa sama vigraform
+sem sett af jöfnum
+\begin{align}
+	\ux(\utime) &= \ulengths_\text{x} + \uspeed_\text{x} \utime \\
+	\uy(\utime) &= \ulengths_\text{y} + \uspeed_\text{y} \utime - \frac{1}{2} \uacceleg \utime^2
+\end{align}
+þar sem $\ulengths_\text{x}$ og $\ulengths_\text{y}$ tákna færslu frá upphafstaðsetningu
+meðfram sitthvorum ás.
+
+\begin{formalexample}
+Kúlu er skotið fram af borði með lárétta hraðanum $6 \uspeedms$, hæð borðsins yfir gólfinu er
+$1,2 \umeter$. Hversu langt lendir kúlan frá borðinu?
+\\[4 ex]
+Til að byrja með þá er nauðsyn finna tímann sem tekur fyrir kúluna að lenda á gólfinu
+til að finna hversu langt hún lendir frá borðinu. Fyrir y-ásinn þá er  
+\[
+	\uy(\utime) = 0 \uspeedms \cdot \utime - \frac{1}{2} \uacceleg \utime^2
+		= - \frac{1}{2} \uacceleg \utime^2
+\]
+og þegar kúlan lendir á gólfinu er staðsetningin meðfram y-ásnum
+\[
+	-1,2 \umeter = - \frac{1}{2} \uacceleg \utime^2 
+		\Leftrightarrow
+		\utime = \sqrt{ \frac{2 \cdot (1,2 \umeter)}{\uacceleg}}
+			= \sqrt{ \frac{2 \cdot (1,2 \umeter)}{ 9,8 \uaccelems}}
+			= 0,49 \usec
+\]
+þá er staðsetningin meðfram x-ásnum er 
+\[
+	\ux(0,49 \usec) = 6 \uspeedms \cdot 0,49 \usec = 2,94 \umeter
+\]
+\end{formalexample}
+Það er hægt að umskrifa fyrri jöfnur sem fall af stærð upphafshraða $\uspeed$
+og hornsins $\theta$ sem hlutnum er skotið af stað með. Þá eru jöfnurnar sem
+eru nýttar (miðað við núll færslu frá núllpunkt)
+\begin{align*}
+	\ux(\utime) &= \uspeed_\text{x} \utime \\
+	\uy(\utime) &= \uspeed_\text{y} \utime - \frac{1}{2} \uacceleg \utime^2
+\end{align*}
+hægt er að einangra tímann til að vera
+\[
+	\ux(\utime) = \ux = \uspeed_\text{x} \utime 
+		\Leftrightarrow
+		\utime = \frac{\ux}{\uspeed_\text{x}}
+\]
+innsetning gefur
+\begin{align*}
+	\ux \left( \frac{\ux}{\uspeed_\text{x}} \right) &= \uspeed_\text{x} \frac{\ux}{\uspeed_\text{x}} \\
+	\uy \left( \frac{\ux}{\uspeed_\text{x}} \right) &= \uspeed_\text{y} \frac{\ux}{\uspeed_\text{x}} 
+		- \frac{1}{2} \uacceleg \left( \frac{\ux}{\uspeed_\text{x}} \right)^2
+\end{align*}
+þá dettur jafnan sem lýsir hreyfingu meðfram x-ásnum út en jafnan sem er meðfram
+y-ásnum er
+\begin{align*}
+	\uy &= \uspeed_\text{y} \frac{\ux}{\uspeed_\text{x}} 
+		- \frac{\uacceleg}{2}  \left( \frac{\ux}{\uspeed_\text{x}} \right)^2 \\
+	\uy	&= \frac{\uspeed_\text{y}}{\uspeed_\text{x}} \ux
+		- \frac{\uacceleg}{2} \frac{\ux^2}{\uspeed_\text{x}^2} \\
+	\uy	&= \frac{\uspeed \sin(\theta)}{\uspeed \cos(\theta)} \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)} \\
+	\uy	&= \tan(\theta) \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)}
+\end{align*}
+sem gefur að hlutur sem hefur upphafshraða og horn hefur ferilinn með $\ux$
+sem breytur fyrir fallið $\uy(\ux)$
+\begin{equation}
+	\uy(\ux) = \tan(\theta) \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)}
+\end{equation}
+Þá er hægt að búa til sýnidæmi úr þessu
+\begin{formalexample}
+Kúlu er kastað með hraðanum $25 \uspeedms$ á horninu $30 \udeg$, það er 
+$3 \umeter$ hár veggur sem er $40 \umeter$ langt í burtu frá kaststaðsetningunni.
+Kemst kúlan yfir vegginn?
+\\[4 ex]
+Þar sem við þekkjum hraða, horn og vegalengd er það fljótt mál að finna hæðina
+sem kúlan er
+\begin{align*}
+	\uy(40 \umeter)	&= \tan(30 \udeg) \cdot 40 \umeter
+		- \frac{9,8 \uaccelems \cdot \left(40 \umeter\right)^2}{2 \left( 25 \uspeedms \right)^2 \cos^2(30 \udeg)} \\
+		&= 23,5 \umeter
+\end{align*}
+sem er talsvert hærra en veggurinn sem er $3 \umeter$ hár. Þá kemst kúlan yfir.
+\end{formalexample}
+
+\section{Hámarks kastvegalengd}
+Markmiðið hér að sýna hvað er hornið sem gefur mestu vegalengdina fyrir ákveðinn
+upphafshraða.
+\[
+	\uy(\ux) = \tan(\theta) \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)}
+\]
+til að einfalda uppsetninguna þá er bara skoðað þegar hluturinn lendir aftur
+á upphafspunkt vegalengdina $\ux$ frá núllpunkti
+\[
+	0 = \tan(\theta) \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)}
+\]
+sem er hægt að umskrifa sem
+\begin{align*}
+	0 &= \tan(\theta) \ux
+		- \frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)} \\
+	\frac{\uacceleg \ux^2}{2\uspeed^2 \cos^2(\theta)} 
+		&= \tan(\theta) \ux \\
+	\frac{\uacceleg \ux}{2\uspeed^2 \cos^2(\theta)} 
+		&= \tan(\theta)  \\
+	\frac{\uacceleg \ux}{2\uspeed^2 \cos^2(\theta)} 
+		&= \frac{\sin(\theta)}{\cos(\theta)}  \\
+	\frac{\uacceleg \ux}{2\uspeed^2} 
+		&= \sin(\theta)\cos(\theta)  \\
+	\uacceleg \ux
+		&= 2\uspeed^2\sin(\theta)\cos(\theta)  \\
+	\ux
+		&= \frac{2\uspeed^2\sin(\theta)\cos(\theta)}{\uacceleg}
+\end{align*}
+sem í fljótu bragði virðist ekki vera sérstaklega hagnýtin lýsing á hámarksvegalengdinni.
+Hins vegar er hægt að umskrifa hornaföllin sem
+\[
+	2\sin(\theta)\cos(\theta) = \sin(2\theta)
+\]
+sem einfaldar fyrri jöfnu til að vera
+\begin{align}
+	\ux
+		&= \frac{\uspeed^2 \sin(2\theta)}{\uacceleg}
+\end{align}
+þá er hámarksvegalengd náð þegar breytingin á $\ux$ staðsetningu er núll á meðan
+hornið breytist, sem gefur
+\begin{align*}
+	0 
+		&= \frac{ d\ux }{d\theta} \\
+	0
+		&= \frac{ d }{d\theta} \left(\frac{\uspeed^2 \sin(2\theta)}{\uacceleg} \right) \\
+	0
+		&= \frac{\uspeed^2}{\uacceleg} \frac{ d\sin(2\theta) }{d\theta} \\
+	0
+		&= \frac{\uspeed^2}{\uacceleg} 2\cos(2\theta)\\
+	0
+		&= \frac{2\uspeed^2}{\uacceleg} \cos(2\theta)
+\end{align*}
+sem getur bara verið jafnt og núll ef
+\begin{align*}
+	0
+		&= \frac{2\uspeed^2}{\uacceleg} \cos(2 \cdot 45\udeg)\\
+	0
+		&= \frac{2\uspeed^2}{\uacceleg}  \cdot 0\\
+	0
+		&= 0\\
+\end{align*}
+s.s. við hornið $45\udeg$ uppfyllist skilyrðið að $\frac{ d\ux }{d\theta}$ er núll.
+Stærðin $\frac{ d\ux }{d\theta}$ segir hver er breytingin á staðsetningu miðað
+við breytingu á horni. Á einhverju horni verður sú stærð jafnt og núll, þar sem
+hún er jákvæð á meðan við aukum vegalengdina sem hluturinn kemst og síðan aftur
+neikvæð þegar hornið verður of stórt og við minnkum vegalengdina sem hluturinn
+kemst.

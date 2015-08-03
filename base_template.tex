@@ -1,0 +1,145 @@
+%
+% Sample document for icelandic characters
+% 
+\documentclass[openany, oneside, final]{memoir}
+%\flushbottom \raggedbottom
+
+\includeonly{sections/part_electrodynamics}
+
+%\chapterstyle{hangnum}
+
+% For images, and graphing
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[colorinlistoftodos]{todonotes}
+
+%\makeheadstyles{wilsondob}
+%\headstyles{dowding}
+%\headstyles{default}
+
+% Style for header and footer
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \setlength{\headheight}{14pt}
+%\headheight
+
+% \fancyhead[LE,RO]{\slshape \rightmark%
+	
+	% }
+% \fancyhead[LO,RE]{\slshape \leftmark }
+
+% \fancyfoot[C]{\thepage}
+
+% Setting the language, enforcing encoding
+\usepackage[icelandic]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Mathematical symbol package
+\usepackage{amsmath}
+\usepackage{calrsfs}
+
+% For spanning rows
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% Chemical symbols package
+\usepackage[version=3]{mhchem}
+
+% Figure wrapping in text
+\usepackage{wrapfig}
+\usepackage{float}
+
+% Choosing paperlayout
+%\usepackage[a4paper]{geometry}
+
+% Margin text 
+\usepackage{marginnote}
+
+% HTTP links
+\usepackage{hyperref}
+
+% Sidebar pictures
+\usepackage{sidecap}
+
+% Adding SI-units package
+\usepackage{siunitx}
+\usepackage{cancel}
+\sisetup{
+	output-product = \cdot,
+	output-decimal-marker = {,},
+	per-mode              = symbol,
+	}
+\DeclareSIUnit\torr{torr}
+
+\input{./style/stylebasic.tex}
+\input{./style/symbolbank.tex}
+
+% for adjustwidth environment
+
+% indexing
+\usepackage{makeidx}
+
+% Testing def functions
+\title{Almenn eðlisfræði \\
+	}
+\author{
+	Krista Hannesdóttir \\
+	%Kristinn Esmar Kristinsson
+	}
+\date{\today}
+
+\begin{document}
+
+%\AddToShipoutPicture{\BackgroundPic}
+
+\maketitle
+%\newpage
+
+\input{sections/preface_license}
+
+\tableofcontents
+
+\mainmatter
+%
+% basic introduction
+% 
+
+\part{Grunnhugtök}
+\include{sections/part_basics}
+
+% 
+% Classical mechanics
+% 
+
+\part{Aflfræði}
+\include{sections/part_mechanics}
+
+% 
+% Thermodynamics
+% 
+
+\part{Varmafræði}
+\include{sections/part_thermodynamics}
+
+% 
+% Electrodynamics
+% 
+
+\part{Rafsegulfræði}
+\include{sections/part_electrodynamics}
+
+% 
+% Modern physics
+% 
+
+\part{Nútíma eðlisfræði}
+\include{sections/part_modernphysics}
+
+\bibliographystyle{plain}	
+\bibliography{bib/pictures}
+
+\end{document} 

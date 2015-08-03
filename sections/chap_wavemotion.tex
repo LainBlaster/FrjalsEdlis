@@ -1,0 +1,375 @@
+% Chap wave motion
+\chapter{Bylgjuhreyfing}
+Bylgjuhreyfing er þegar hlutur hreyfist með reglulegri tíðni, t.d.
+sveiflur á pendúl og útbreiðsla á bylgju í plani. Þá er hægt að nota
+svipaðar jöfnur og gert er í kaflanum um hringhreyfingu. Föll sínus
+og kósínus henta mjög vel til þess. Samt er nauðsyn að koma með nýja
+fasta og stærðir sem lýsa hegðun bylgjunnar.
+
+Þá er einhver bylgja með hámarks útslag frá miðstöðu ($\uwaveampA$) 
+og hornhraða ($\uwaveangularomega$). Þá er
+klassískri bylgju oft lýst með fallinu
+\[
+	\ux(\utime) = \uwaveampA \cos (\uwaveangularomega \utime)
+\]
+þetta er ein leið til að lýsa slíku falli, það er til nokkrar útgáfur
+sem er notaðar eftir ýmsum aðstæðum. Það eru nokkur hugtök sem bylgjum
+er ljáð í téð
+\begin{description}
+	\item[Ölduhæð, sveifluvídd] Sem er hámarkið sem bylgjan nær frá miðju sinni. 
+		Sem er mesta útslag sem hlutur í hreyfingu getur leyft sér frá punkti
+		sem oft nefndur miðstaða.
+	\item[Bylgjuhraði] Sá hraði sem bylgja breiðir út sér með
+	\item[Bylgjulengd] Lengin sem bylgja nær að breiða úr sér í einni sveiflu
+	\item[Hornhraði, horntíðni] Er fasti sem gefur upplýsingar um hversu marga
+		radíana í ferli bylgjunnar eru farnir á hverri sekúndu.
+	\item[Tíðni, sveiflutíðni] Er fasti sem gefur upplýsingar umgangar
+		í ferli bylgjunnar eru farnir á hverri sekúndu. Svipað og fara heilan
+		hring í hringferlinum.
+\end{description}
+\todo[color=blue!25!white]{Avoid this list, seemes to defeat its own purpose }%
+
+\begin{figure}
+	\begin{tikzpicture}[domain=0:4]
+	  \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+	  \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+	  \draw[->] (0,-1.2) -- (0,4.2) node[above] {$y$};
+	  \draw plot[id=sin] function{sin(x)} node[right] {$f(x) = \sin x$};
+	\end{tikzpicture}
+	\caption{Mynd af helstu stærðum sem eru tengd bylgjuhreyfingu}
+\end{figure}
+\todo[color=blue!25!white]{Finish current picture without using pgf functions}%
+
+\section{Sveiflur gorma}
+Þegar gormur sveiflast umhverfis miðstöðu, þá togar hann hlutinn aftur í átt
+að miðstöðu. Þetta þýðir í kraftasamhengi að
+\begin{equation}
+	\uforce_\text{gormur} = \uspringconstk \ulengthx
+\end{equation}
+og ber að nefna stefna gormkraftsins er alltaf í átt að miðstöðu, þetta er einungis
+stærð gormkrafts. Þá er hægt að
+leika sér smáveigis með slíkar jöfnu, það er hægt að umskrifa til
+\[
+	\umass \uaccelea = -\uspringconstk \ulengthx
+\]
+neikvætt formerki hérna táknar að krafturinn beinist að miðstöðu. Við vitum
+að hröðun er breyting á hraða yfir tíma, og hraði er breyting á staðsetningu yfir
+tíma. Sem gefur
+\begin{align*}
+	\umass \uaccelea(\utime) &= -\uspringconstk \ulengthx(\utime) \\
+	\umass \frac{\ud \uspeed(\utime)}{\ud \utime} &= -\uspringconstk \ulengthx(\utime) \\
+	\umass \frac{\ud^2 \ulengthx(\utime)}{\ud \utime^2} &= -\uspringconstk \ulengthx(\utime)
+\end{align*}
+sem er hægt að umskrifa til
+\[
+	\frac{\ud^2 \ulengthx(\utime)}{\ud \utime^2} = -\frac{\uspringconstk}{\umass} \ulengthx(\utime)
+\]
+þetta er diffurjafna sem hefur sett af lausnum sem eru samsetning af sínus eða
+kósínus lausnum. Hins vegar þá var í byrjun kaflans þá kom ágiskun á hvað gæti
+verið heppileg lýsing á bylgju sem er
+\[
+	\ux(\utime) = \uwaveampA \cos (\uwaveangularomega \utime)
+\]
+þá er innsetning í diffurjöfnu
+\begin{align*}
+	\frac{\ud^2 \ulengthx(\utime)}{\ud \utime^2}
+		&= \frac{\ud}{\ud \utime}\left( \frac{\ud \ulengthx(\utime))}{\ud \utime} \right) \\
+		&= \frac{\ud}{\ud \utime}\left( -\uwaveampA \uwaveangularomega \sin{(\uwaveangularomega \utime)}  \right) \\
+		&= -\uwaveampA \uwaveangularomega^2 \cos{(\uwaveangularomega \utime)} \\
+		&= - \uwaveangularomega^2 \ux(\utime)
+\end{align*}
+og þá er diffurjafnan líka
+\begin{align*}
+	-\frac{\uspringconstk}{\umass} \ulengthx &= - \uwaveangularomega^2 \ux(\utime) \\
+	\frac{\uspringconstk}{\umass} &= \uwaveangularomega^2 \\
+	\uwaveangularomega^2 &= \frac{\uspringconstk}{\umass} \\
+	\uwaveangularomega &= \sqrt{\frac{\uspringconstk}{\umass}}
+\end{align*}
+sem er áhugaverð niðurstaða, núna er hægt að finna hornatíðni hlutars á enda
+gorms með einungis upplýsingar um massa og kraftstuðull gorms
+\begin{align}
+	\uwaveangularomega &= \sqrt{\frac{\uspringconstk}{\umass}}
+\end{align}
+sem er líka hægt að umskrifa til að vera sveiflutími
+\begin{align}
+	\uorbitaltime &= 2 \pi \sqrt{\frac{\umass}{\uspringconstk}}
+\end{align}
+þá eru komnar sett af breytum sem geta lýst furðulega miklu varðandi innihaldi
+sveifluhreyfingar, án þess að taka sérstakt tilfelli af gormi fyrir.
+
+\begin{formalexample}
+Gormur liggur í láréttu og er fest við massa sem er $5 \ukilo\ugramm$, kraftstuðull
+gormsins er $140 \uspringconstnm$, hver er horntíðni, sveiflutíðni og sveiflutími
+gormsins?
+\\[4 ex]
+Þar sem gefið er bæði kraftstuðull og massir þá er horntíðni
+\begin{align*}
+	 \uwaveangularomega &= \sqrt{\frac{\uspringconstk}{\umass}}
+		= \sqrt{\frac{140 \uspringconstnm}{5 \ukilo\ugramm}}
+		= 5,29 \uhertzs
+\end{align*}
+síðan er hægt að nota til að finna tíðni með
+\begin{align*}
+	\ufrequency &= \frac{\uwaveangularomega}{2 \pi}
+		= \frac{5,29 \uhertzs}{2 \pi}
+		= 0,842 \uhertz
+\end{align*}
+og sveiflutíma með
+\begin{align*}
+	\uorbitaltime &= \frac{1}{\ufrequency}
+		= \frac{1}{0,842 \uhertz}
+		= 1,19 \usec
+\end{align*}
+\end{formalexample}
+Sem stærð er hægt að nýta horntíðni á margvíslegan máta, t.d. er sveiflutíðni
+($\uwaveangularomega$) stærð sem getur lýst hegðun efna. Þá eru atóm með bæði
+fráhrindi- og aðdráttarkrafta, sem er oft lýst með eiginleikum gormsins sem
+líkan af hegðun þeirra. Þá er titringur af atómum með tíðni á stærðargráðunni
+$10^{13} \uhertz$. Sem myndi gefa fyrir massa koparatóms
+\begin{align*}
+	2 \pi \ufrequency &= \sqrt{\frac{\uspringconstk}{ \umass}} \\
+	2 \pi \cdot 10^{13} \uhertz &= \sqrt{\frac{\uspringconstk}{ \uEE{1.05}{-25} \ukilo\ugramm }} \\
+	\uspringconstk &= \left(2 \pi \cdot 10^{13} \uhertz \right) \cdot \uEE{1.05}{-25} \ukilo\ugramm \\
+		&= 41600 \uspringconstnm
+\end{align*}
+sem er há tala, en í raun sýnir af hverju málmar eru sterkir og hafa góða leiðni
+fyrir hita. Líka er hraði hljóðs margfalt hærri í málmum en í lofti, nákvæmlega vegna
+stífleika ,,gormana''.
+
+
+\subsection{Orka sveifluhreyfingar}
+Þar sem við fengum heppilega lýsingu á því hvernig bylgja hagar sér við góða
+ágiskun í fyrri köflum, þá er hægt nota hana til að sýna að orkan sem sveiflan
+hefur er föst, óbreytt. Fyrst þarf að finna stöðuorku gormsins, almennt gildir að
+vinnan framkvæmd sem verður að stöðuorku er
+\[
+	\upotentialu = \int_{\ulengthx_1}^{\ulengthx_2} \uforce \ud \ulengthx
+\]
+eða með krafti gorms verður það
+\begin{align*}
+	\upotentialu &= \int_{0}^{\ulengthx_2} \uspringconstk \ulengthx \ud \ulengthx
+		= \left[ \frac{1}{2} \uspringconstk \ulengthx^2 \right]_{0}^{\ulengthx_2}
+		= \frac{1}{2} \uspringconstk \ulengthx_2^2
+		= \frac{1}{2} \uspringconstk \ulengthx^2
+\end{align*}
+en áður er áfram haldið, þá er góð hugmynd að hafa fundið hraðan sem massinn
+á enda gormsins hefur
+\begin{align*}
+	\uspeed(\utime) &=  \frac{\ud \ulengthx(\utime)}{\ud \utime}
+	= -\uwaveampA \uwaveangularomega \sin{(\uwaveangularomega \utime)}
+\end{align*}
+og vélræn orka gormsins er
+\begin{align*}
+	\umechenergy &= \ukinetick + \upotentialu \\
+		&= \frac{1}{2} \umass \uspeed^2 + \frac{1}{2} \uspringconstk \ulengthx(\utime)^2 \\
+		&= \frac{1}{2} \umass \left(-\uwaveampA \uwaveangularomega \sin{(\uwaveangularomega \utime)} \right)^2
+			+ \frac{1}{2} \uspringconstk \left( \uwaveampA \cos{(\uwaveangularomega \utime)} \right)^2 \\
+		&= \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2 \sin^2{(\uwaveangularomega \utime)}
+			+ \frac{1}{2} \uspringconstk \uwaveampA^2 \cos^2{(\uwaveangularomega \utime)}
+\end{align*}
+þá er hægt að nýta $\uwaveangularomega^2 = \frac{\uspringconstk}{\umass}$ til að
+\begin{align*}
+	\umechenergy &= \ukinetick + \upotentialu \\
+		&= \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2 \sin^2{(\uwaveangularomega \utime)}
+			+ \frac{1}{2} \umass \uwaveangularomega^2 \uwaveampA^2 \cos^2{(\uwaveangularomega \utime)} \\
+		&= \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2 
+			\left( \sin^2{(\uwaveangularomega \utime)} + \cos^2{(\uwaveangularomega \utime)} \right) \\
+		&= \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2 
+			\left( 1 \right) \\
+		&= \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2
+\end{align*}
+Sem þýðir að heildarorka gorms er ávalt föst stærð, óháð því hvar á ferli sveiflunar
+gormurinn er, sem gefur
+\begin{equation} \label{eqn:wavemotion:springenergy}
+	\umechenergy = \frac{1}{2} \umass \uwaveampA^2 \uwaveangularomega^2
+		= \frac{1}{2} \uspringconstk \uwaveampA^2
+\end{equation}
+
+\begin{formalexample}
+Gormur hefur kraftstuðullinn $160 \uspringconstnm$ og sveifluvíddin er $0,2 \umeter$. Hver
+er heildarorka gormsins?
+\\[4 ex]
+Þá er orkan
+\[
+	\umechenergy = \frac{1}{2} \uspringconstk \uwaveampA^2
+		= \frac{1}{2} \cdot 160 \uspringconstnm \cdot \left( 0,2 \right)^2
+		= 3,2 \ujoule
+\]
+\end{formalexample}
+\begin{formalexample}
+Gormur með massann $2 \ukilo\ugramm$ er teygður $0,1 \umeter$ frá miðstöðu og gefinn 
+hraðinn $1,2 \uspeedms$ frá miðstöðu.
+Kraftstuðull gormsins er $160 \uspringconstnm$. Hver er sveifluvídd gormsins?
+\\[4 ex]
+Heildarorkan er
+\begin{align*}
+	\umechenergy &= \ukinetick + \upotentialu \\
+		&= \frac{1}{2} \umass \uspeed^2 + \frac{1}{2} \uspringconstk \ulengthx(\utime)^2 \\
+		&= \frac{1}{2} \cdot 2 \ukilo\ugramm \cdot \left( 1,2 \uspeedms \right)^2 
+			+ \frac{1}{2} \cdot 160 \uspringconstnm \cdot \left( 0,1 \umeter \right)^2 \\
+		&= 1,44 \ujoule 
+			+ 0,8 \ujoule \\
+		&= 2,24 \ujoule
+\end{align*}
+þar sem heildarorkan er alltaf sú sama, þá er hægt að setja orkuna sem er
+reiknuð á einum stað í sveifluhreyfingunni til að vera jöfn heildarorkunni
+fundin í jöfnu \ref{eqn:wavemotion:springenergy}
+\begin{align*}
+	2,24 \ujoule &= \frac{1}{2} \uspringconstk \uwaveampA^2 \\
+	\frac{2,24 \ujoule}{\frac{1}{2} \uspringconstk } &= \uwaveampA^2 \\
+	\uwaveampA^2 &= \frac{2,24 \ujoule}{\frac{1}{2} \cdot 160 \uspringconstnm }\\
+	\uwaveampA^2 &= 0.028 \umeter^2\\
+	\uwaveampA &= \sqrt{0.028 \umeter^2} \\
+		&= 0.167 \umeter = 16,7 \ucenti\umeter
+\end{align*}
+Sem er sveifluvíddin.
+\end{formalexample}
+
+\section{Pendúll}
+Það er hægt að umskrifa þann kraft sem pendúll verður fyrir vegna þyngdarkrafts til að
+vera með sömu hegðun og gormur. Hins vegar er það einungis hægt fyrir sveiflur sem eru
+ekki sérlega stórar. %
+\todo[color=blue!25!white]{Add a picture showing the approximation}%
+Þetta er nálgun á hegðun en virkar furðulega vel. Þá er krafturinn 
+sem verkar á massa í spotta venjulega
+\begin{align*}
+	\uforce_\text{pendúll} &= \uforce_\uacceleg \sin{\theta}
+\end{align*}
+hins vegar með nálgun verður
+\begin{align*}
+	\uforce_\text{pendúll} &= \uforce_\uacceleg \frac{\ulengthx}{\ulengthl}
+\end{align*}
+og á sama máta og með gorminn verður
+\begin{align*}
+	\umass \uaccelea 
+		&= -  \frac{\uforce_\uacceleg}{\ulengthl} \ulengthx \\
+	\umass \uaccelea 
+		&= -  \frac{\umass \uacceleg}{\ulengthl} \ulengthx \\
+	\uaccelea 
+		&= - \frac{\uacceleg}{\ulengthl} \ulengthx \\
+	\frac{\ud^2 \ulengthx}{\ud \utime^2}
+		&= - \frac{\uacceleg}{\ulengthl} \ulengthx
+\end{align*}
+sem þýðir að fyrir pendúl að
+\begin{align}
+	\uwaveangularomega &= \sqrt{ \frac{\uacceleg}{\ulengthl} }
+\end{align}
+og gefur að sveiflutíminn er
+\begin{align}
+	\uorbitaltime &= 2 \pi \sqrt{ \frac{\ulengthl}{\uacceleg} }
+\end{align}
+\begin{formalexample}
+Kúla hengur í $2 \umeter$ löngu bandi, hver er horntíðni og sveiflutími
+kúlunnar?
+\\[4 ex]
+Þá er horntíðni
+\begin{align*}
+	\uwaveangularomega &= \sqrt{ \frac{9,8 \uaccelems}{2 \umeter} }
+		= 2,21 \uhertzs
+\end{align*}
+og sveiflutíman
+\begin{align*}
+	\uorbitaltime &= 2 \pi \sqrt{ \frac{2 \umeter}{9,8 \uaccelems} }
+		= 2,84 \usec
+\end{align*}
+\end{formalexample}
+
+\section{Einfaldar bylgjur}
+Bylgjur hafa getuna til að breiða úr sér með ákveðnum hraða, þá er sagt að
+hún hafi útbreiðsluhraða. Sem hluti af því þarf að skilgreina bylgjulengd $\uwavelength$ og
+sveiflutíma $\uorbitaltime$. Bylgjulengd er veglengdin sem bylgjan ferðast til að fara frá einum
+bylgjutoppi til annars~\footnote{Það er réttar að segja það er vegalengdin
+sem bylgjan ferðast á einni sveiflu sem er $2 \pi$ í radíönum} og sveiflutíminn
+er tíminn sem tekur að fara frá byrjunarstöðu til útslags báðum megin við miðstöðu
+og aftur til byrjunarstöðu.
+Bylgjuhraði er skilgreindur til að vera
+\begin{equation}
+	\uwavevelocity = \frac{\uwavelength}{\uorbitaltime} = \uwavelength \ufrequency
+\end{equation}
+
+\todo[color=blue!25!white]{Add a picture for the wave, adding wavelength and
+period symbols}%
+
+Einföldum bylgjum er oft lýst á tvö máta, sem langbylgjur og sem þverbylgjur.
+Langbylgjur hafa bylgjueiginleika \emph{samsíða} útbreiðslustefnu á meðan
+þverbylgjur hafa bylgjueiginleika \emph{þvert} á útbreiðslustefnu. Sem dæmi eru
+vatnsbylgjur þverbylgjur og hljóðbylgjur eru langbylgjur.
+\todo[color=blue!25!white]{Add a picture for the longditudional and transversive
+waves}%
+
+\subsection{Samliðun bylgja}
+Bylgjur hafa þann eiginleika að geta tvinnast saman, sem leiðir af sér aukningu
+eða minnkun af útslagi bylgjunnar. Gagnleg samliðun er þegar tvær (eða fleiri)
+bylgjur auka útslagið og eyðandi samliðun er þegar tvær (eða fleiri) ná að
+draga úr útslagi hvors annars. Dæmi um slíkt er gefið of í myndrænu formi en
+í jöfnuformi þá er það
+\begin{align*}
+	\ux_\text{AB}(\utime) &= \ux_\text{A}(\utime) + \ux_\text{B}(\utime) \\
+		&= \uwaveampA_\text{A} \cos (\uwaveangularomega \utime + \uphase_\text{A}) +
+			\uwaveampA_\text{B} \cos (\uwaveangularomega \utime + \uphase_\text{B}) \\
+\end{align*}
+sem er í það minnsta lagi ekki álítanlegt form, hérna er $\uphase_\text{A}$ og
+$\uphase_\text{B}$ fasahliðrun fyrir sitthvora bylgjuna. Í meira daglegu tali
+þá er fasahliðrun svipað og breyta tímasetningunni sem bylgjan leggur afstað.
+Til að búa til eyðandi samliðun þarf ákveðið skilyrði að koma upp, bylgjurnar
+þurfa að vera úr fasa (s.s. byrja ekki á sama tíma) og með jafnstórt hámarks útslag.
+Til að sjá slíkt er hægt að hafa
+$\uphase_\text{AB} = \uphase_\text{A} - \uphase_\text{B} = 180 \udeg$ og
+$\uwaveampA_\text{A} = \uwaveampA_\text{B}$ sem gefur
+\begin{align*}
+	\ux_\text{AB}(\utime) &= \ux_\text{A}(\utime) + \ux_\text{B}(\utime) \\
+		&= \uwaveampA_\text{A} \cos (\uwaveangularomega \utime) +
+			\uwaveampA_\text{A} \cos (\uwaveangularomega \utime + 180 \udeg) \\
+		&= \uwaveampA_\text{A} \cos (\uwaveangularomega \utime) -
+			\uwaveampA_\text{A} \cos (\uwaveangularomega \utime) \\
+		&= 0 \\
+\end{align*}
+sem gefur að bylgjur sem er úr fasa með $180 \udeg$ og með sömu sveifluvídd hafa
+lengur ekki áhrif á nokkuð. Sem þykir dálítið sérstakt en í raun er þetta kunnulegt
+fyrirbrigði úr daglegu lífi þar sem við getum stundum heyrt hljóð ,,hverfa''.
+
+\todo[color=blue!25!white]{Add picture for interference, showing constructive
+and destructive interference}%
+
+\section{Doppler áhrif}
+Doppler áhrif koma þegar bylgjulengdin breytist vegna þess að sendandi bylgjunar
+er á hreyfingu. Þá er hægt að finna hver nýja bylgjulengdin verður sem hlustandi
+heyrir. Það þarf einmitt að gera greinamun á því hver sendir og móttekur
+bylgjuna. Daglega er þetta kunnugt þegar bílar keyra frammhjá manni, t.d.
+sírenur hljóma ,,dýpri'' þegar sjúkrabíll keyrir frá manni en ,,skrækari''
+þegar sjúkrabíll keyrir að manni. Þá þarf að koma með skilgreiningar 
+á því hver er sendandi og hver er móttakandi.
+\begin{align*}
+	\uwavevelocity &= \uwavelength_{\text{send}} \ufrequency_{\text{send}} \\ 
+	\uwavevelocity &= \uwavelength_{\text{mót}} \ufrequency_{\text{mót}}
+\end{align*}
+hraði sendanda hefur áhrif á útbreiðslu með
+\begin{align*}
+	\uwavelength_{\text{send}} &= 
+		(\uwavevelocity \pm \uspeed_{\text{send}} ) \uorbitaltime_{\text{mót}}
+\end{align*}
+þegar sendandi stefnir að móttakanda þá dregst hraðinn frá og þegar sendandi
+stefnir frá móttakanda bætist hraðinn við. Sem gefur að tíðni sendana er
+\begin{align*}
+	\ufrequency_\text{send} &= \frac{ \uwavevelocity }{
+		 (\uwavevelocity \pm \uspeed_\text{send} ) \uorbitaltime_\text{mót} } \\
+	&= \frac{ \uwavevelocity} {
+		 \uwavevelocity \pm \uspeed_\text{send} } \ufrequency_\text{mót}
+\end{align*}
+þetta er sértilfelli þegar annar aðilinn er kyrr og hinn er á hreyfingu, þá
+er $\uwavevelocity$ hraði bylgjunar í miðli%
+~\footnote{Miðill getur t.d. verið loft sem hljóðið berst með eða sjálft
+tómarúmið sem ljósið berst með.}
+\todo[color=blue!25!white]{Add a picture for a observer that is static while the
+transmitter is in motion, showing the change in wavelength}
+Sem gefur að tíðnin sem sendandin hefur er
+\begin{align}
+	\ufrequency_\text{send} &= \frac{ \uwavevelocity } {
+		 \uwavevelocity \pm \uspeed_\text{send} } \ufrequency_\text{mót}
+\end{align}
+hins vegar er hægt að láta móttakanda vera líka á ferð, þá verður uppsetningin svipuð
+nema að bylgjulengd móttakanda breytist líka eins og hjá sendanda.
+\begin{align*}
+	\uwavelength_{\text{mót}} &= 
+		(\uwavevelocity \pm \uspeed_\text{mót} ) \uorbitaltime_{\text{mót}}
+\end{align*}

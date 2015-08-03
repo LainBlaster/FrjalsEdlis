@@ -1,0 +1,118 @@
+%
+\section{Þverkraftur}
+Ef við látum kraft verka á flöt er krafturinn sem verkar beint út frá fletinum kallaður
+þverkraftur, þá er stefna kraftsins hornrétt á flötinn. Krafturinn sem er notaður til að
+skilgreina hvað þrýstingur er
+\begin{equation}
+	\upressure = \frac{\uforce_\text{þver}}{\uarea}
+\end{equation}
+
+\begin{formalexample}
+Maður með massann $\SI{80}{\kg}$ stendur á plötu sem er $\SI{0.5}{\m}$ á breidd og
+$\SI{0.2}{\m}$ á lengd. Hver er þrýstingurinn sem botninn á 
+plötunni upplifir vegna mannsins?
+\\[4 ex]
+Þyngdarkrafturinn vegna mannsins er
+\[
+	\uforce_\uacceleg = \umass \uacceleg 
+		= \SI{80}{\kg} \times \SI{9.8}{\m\per\s\squared}
+		= \SI{784}{\N}
+\]
+þar sem krafturinn verkar hornrétt á plötuna og það er kraftjafnvægi, þá er 
+$\uforce_\uacceleg = \uforce_\text{þver}$ sem gefur
+\[
+	\upressure = \frac{ \SI{784}{\N} 
+			}{ \SI{0.5}{\m} \times \SI{0.2}{\m} }
+		= \SI{7840}{\Pa}
+\]
+\end{formalexample}
+
+
+\section{Þyngdarþrýstingur}
+% Pressure in fluid at depth
+Þegar maður fer dýpra í vatni eykst massinn sem er fyrir ofan mann, þ.e.a.s. það
+áhvílir meiri massi eftir því dýpra er farið. Þá er hægt að meta kraftinn
+með
+\[
+	\uforce_\uacceleg = \rho \uvolume \uacceleg
+		= \rho \uarea \ulengthh \uacceleg
+\]
+með innsetningu í þrýsting
+\[
+	\upressure = \frac{\rho \uarea \ulengthh \uacceleg}{\uarea}
+		= \rho \ulengthh \uacceleg
+\]
+einfaldað gefur
+\begin{equation}
+	\upressure
+		= \rho \ulengthh \uacceleg
+\end{equation}
+það sem er gott að muna er að þessi þrýstingur kemur frá öllum áttum, þá er
+heildarkrafturinn núll. Það er einmitt vegna lögmáls Pascals, að vökvi dreifist
+jafnt undir sama þrýstingi. Almennt getum við sagt að þrýstingurinn sem við upplifum
+er líka þrýstingurinn frá andrúmsloftinu ásamt þrýstingnum frá vökvanum. Sem þýðir
+\[
+	\upressure_\text{heild} = \upressure + \upressure_0
+\]
+þar sem $\upressure_0$ er þrýstingur við yfirborð jarðar.
+
+\subsection{Lögmál Arkimedesar}
+Það er hægt að leiða út lögmálið út frá grunnforsendum, lögmálið er gefið sem
+\begin{equation}
+	\uforce_\text{upp} = \rho \uvolume \uacceleg
+\end{equation}
+þar sem $\uvolume$ er rúmmálið af hlutnum sem er dýft ofan í vökva og $\rho$ er
+eðlismassi vökvans. Þá er hægt að leiða lögmálið út frá því að byrja skoða kraftana
+sem verka á sívalning í vökva, heildarkrafturinn er
+\begin{align*}
+	\uforce_\text{heild} 
+		&= \uforce_\text{botn} - \uforce_\text{top} \\
+		&= \upressure_\text{botn} \uarea - \upressure_\text{top} \uarea \\
+		&= \rho \ulengthh_\text{botn} \uacceleg \uarea - \rho \ulengthh_\text{top} \uacceleg \uarea \\
+		&= \rho \uacceleg \uarea \left( \ulengthh_\text{botn} - \ulengthh_\text{top} \right)\\
+		&= \rho \uacceleg \uarea \Delta \ulengthh \\
+		&= \rho \uvolume \uacceleg
+\end{align*}
+fyrir sívalning gildir að $\uarea \Delta \ulengthh = \uvolume$. Sem gefur þegar
+lögmál Arkimedes er jafngildi þessa, þ.e.a.s. 
+$\uforce_\text{heild} = \uforce_\text{upp}$.
+
+
+\begin{formalexample}
+Bolti með rúmmálið $\SI{0.03}{\m\cubed}$ er haldið neðansjávar svo að hann er
+kyrr, boltinn hefur massan $\SI{0.100}{\kg}$. Hversu stóran kraft þarf til þess
+halda boltanum niðri?
+\\[4 ex]
+Kraftastefnan er valin til að vera jákvæð þegar krafturinn stefnir niður.
+Heildarkrafturinn sem verkar á boltann er
+\begin{align*}
+	\uforce_\text{heild} &= \uforce_\text{upp} -\uforce_\text{g} 
+		- \uforce_\text{ýta}
+\end{align*}
+þar sem boltinn er í kyrrstöðu þá er heildarkrafturinn núll
+\begin{align*}
+	\SI{0}{\N} &= \uforce_\text{upp} -\uforce_\text{g} 
+		- \uforce_\text{ýta} \\
+	\uforce_\text{ýta} &= \uforce_\text{upp} - \uforce_\text{g}
+\end{align*}
+krafturinn sem verkar vegna uppdrifs er
+\begin{align*}
+	\uforce_\text{upp} &= \rho \uvolume \uacceleg \\
+		&= \SI{1000}{\kg\per\m\cubed} \times \SI{0.03}{\m\cubed}
+			\times \SI{9.8}{\m\per\s\squared} \\
+		&= \SI{294}{\N}
+\end{align*}
+og þyngdarkrafturinn
+\begin{align*}
+	\uforce_\text{g} &= \umass \uacceleg \\
+		&= \SI{0.100}{\kg} \times \SI{9.8}{\m\per\s\squared} \\
+		&= \SI{0.98}{\N}
+\end{align*}
+þá myndi ýtikrafturinn vera
+\begin{align*}
+	\uforce_\text{ýta} &= \uforce_\text{upp} - \uforce_\text{g} \\
+		&= \SI{294}{\N} - \SI{0.98}{\N} \\
+		&= \SI{293.02}{\N}
+\end{align*}
+
+\end{formalexample}

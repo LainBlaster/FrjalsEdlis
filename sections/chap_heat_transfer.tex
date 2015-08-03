@@ -1,0 +1,137 @@
+% Chap angular motion
+\chapter{Varmarýmd}
+Þegar hitamismunur á sér stað þá mun heitari hluturinn reyna lækka hitastigið
+sitt og kaldari hluturinn mun reyna hækka hitastigið sitt. Það sem gerist er
+að orka færist á milli hlutana og sú orka hefur nafnið varmi.
+
+Varmi er orka, en er nánar tiltekið orka sem tengist hitastigi hluta. Því er
+varmaflæði líka orkuflæði, hlutir geta gefið frá sér varma og tekið til
+sín varma. S.s. það er geta sem hlutir hafa mismunandi mæli.
+
+Varmarýmd er stærð táknar magnið af orku fyrir hvert kelvin~\footnote{Hægt 
+líka að segja hluturinn rúmar orku á hverja kelvin breytingu} 
+sem hlutur breytir hita sínum. Í jöfnuformi þá er varmarýmd
+\begin{equation}
+	\uheatcapacity = \frac{\uthermaleng}{\Delta \utemperature}
+\end{equation}
+síðan er hægt að mæla varmarýmd hluta með að þekkja magnið af orku sem er notað
+til að hita hlutinn upp. Einingin fyrir varmarýmd er $\uheatcapacityjk$ eða
+Joule per Kelvin.
+
+\begin{formalexample}
+Ílát er hitað upp með rafhitara sem hefur aflið $2 \ukilo\uwatt$, uþb. $80\%$ af
+orku rafhitarns fer í að hita ílátið, eftir að rafhitarinn er búin að vera
+í gangi í $2 \umin$ þá er hiti ílátsins búinn að hækka um $20 \ukelvin$.
+Hver er varmarýmd ílátsins?
+\\[4 ex]
+tíminn sem hitarinn er í gangi eru $2 \umin = 120 \usec$ og orkan sem hann lætur
+í té er
+\[
+	\Delta\upotentialu = \upower \Delta\utime 
+		= \uEE{2}{3} \uwattjs \cdot 120 \utime
+		= 240 \ukilo\ujoule
+\]
+og af þessari orku, þá er $\uthermaleng = 0,80 \cdot 240 \ukilo\ujoule 
+= 192 \ukilo\ujoule$ sem gefur að varmarýmdin er
+\begin{align*}
+	\uheatcapacity &= \frac{\uthermaleng}{\Delta \utemperature} \\
+		&= \frac{\uEE{192}{3} \ujoule}{20 \ukelvin} \\
+		&= 9600 \uheatcapacityjk 
+\end{align*}
+\end{formalexample}
+
+\section{Eðlisvarmi}
+Eðlisvarmi er sama hugtak og varmarýmd nema þá er tekið mark á massa hlutsins
+sem hefur varmarýmdina. S.s. eðlisvarmi er varmarýmd per kílógramm. Eðlisvarmi er
+gefin til að vera
+\begin{equation}
+	\uspecificheat = \frac{\uthermaleng}{\umass \Delta\utemperature}
+\end{equation}
+þar sem einingin fyrir eðlisvarma er $\uspecificheatjkgk$. Önnur heppileg
+leið til að sýna sömu jöfnu er
+\[
+	\uthermaleng = \umass \uspecificheat \Delta \utemperature
+\]
+en þessi jafna er í raun útleitt form af varmarýmd per massa.
+\begin{formalexample}
+Hversu mikla orku þarf til þess að hita 2 lítra af vatni um $30 \ukelvin$? 
+Eðlisvarmi vatns er $4186 \uspecificheatjkgk$.
+\\[4 ex]
+Varminn sem vatnið tekur við er
+\begin{align*}
+	\uthermaleng &= \umass \uspecificheat \Delta \utemperature \\
+		&= 2 \ukilo\ugramm \cdot 4186 \uspecificheatjkgk \cdot 30 \ukelvin \\
+		&= 251 \ukilo\ujoule 
+\end{align*}
+\end{formalexample}
+
+\section{Gagnleg not af varmarýmd}
+Dæmi um nýtingu varmarýmdar er oftast til að finna breytingu í hitastigi hluta
+miðað við magnið af orku sem er gefin eða þeginn sem varmi. Það sem er oft góð
+hugmynd að áætla er að varmi sem hlutur getur látið frá sér fer allur í hlutinn
+sem þiggur. Sem gefur
+\[
+	\uthermaleng_\text{gefin} = \uthermaleng_\text{þeginn}
+\]
+til að byrja með virðist þetta ekki vera einstaklega hagnýtt fyrirbæri. Vonin er
+að sýna hvernig þetta litla samhengi leggur drög að góðu verkfæri.
+
+\begin{formalexample}
+$20 \ugramm$ af ís við bræðslumark er færður í skál með $0,5 \uliter$ af $20 
+\udegcent$ heitu vatni. Hvert er lokahitastigið á vatninu með bráðnaða ísnum?
+\\[4 ex]
+Vatnið sem ísinn er lagður mun tapa varma sem ísinn mun allur nýta, þeas. vatnið
+gefur varman sem ísinn þiggur. Bæði bráðnaði ísinn og vatnið munu enda í sama 
+lokahitastigi. Orka sem krefst að breyta hitastigi vatnsins er
+\begin{align*}
+	\uthermaleng_\text{vatn} &= \umass_\text{vatn} \uspecificheat_\text{vatn}\Delta \utemperature_\text{vatn} \\
+		&= 0,5 \ukilo\ugramm \cdot 4186 \uspecificheatjkgk \cdot \Delta \utemperature_\text{vatn} \\
+		&= 2093 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn}
+\end{align*}
+varminn sem ísinn þiggur er
+\begin{align*}
+	\uthermaleng_\text{ís} &= \ulatentheat \umass_\text{ís} 
+		+ \umass_\text{ís} \uspecificheat_\text{vatn}\Delta \utemperature_\text{ís} \\
+		&= \uEE{334}{3} \ulatentheatjkg \cdot 0,020 \ukilo\ugramm 
+			+ 0,02 \ukilo\ugramm \cdot 4186 \uspecificheatjkgk \cdot \Delta \utemperature_\text{ís} \\
+		&= 6680 \ujoule +  83,7 \uheatcapacityjk \cdot \Delta \utemperature_\text{ís}
+\end{align*}
+þar sem við erum bara taka stærðina af varmanum þá er krafa að hitastigsbreytingar
+séu jákvæðar. Við vitum líka að ísinn fer frá $0 \udegcent$ til 
+$\utemperature_\text{lok}$ og vatnið fer frá $20 \udegcent$ til $\utemperature_\text{lok}$.
+Samanlagt er stærðin hitastigsbreytingu 
+$\Delta \utemperature_\text{vatn} + \Delta \utemperature_\text{ís} = 20 \ukelvin$.
+Sem þýðir að $\Delta \utemperature_\text{ís} = 20 \ukelvin - \Delta \utemperature_\text{vatn}$
+Gefur það að varminn sem ísinn þiggur er
+\begin{align*}
+	\uthermaleng_\text{ís}  &= 6680 \ujoule +  83,7 \uheatcapacityjk \cdot \Delta \utemperature_\text{ís} \\
+		&= 6680 \ujoule +  83,7 \uheatcapacityjk \cdot \left(20 \ukelvin - \Delta \utemperature_\text{vatn} \right)
+\end{align*}
+þá er hægt að setja að varminn sem vatnið gefur er þegið af ísnum
+\begin{align*}
+	\uthermaleng_\text{vatn} &=  \uthermaleng_\text{ís} \\
+	2093 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn}
+		&= 6680 \ujoule +  83,7 \uheatcapacityjk \cdot 20 \ukelvin - 83,7 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn}\\
+	2093 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn}
+		&= 6680 \ujoule +  1674 \ujoule - 83,7 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn} \\
+	2093 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn} + 83,7 \uheatcapacityjk \cdot \Delta \utemperature_\text{vatn}
+		&= 8354 \ujoule \\
+	\left( 2093 \uheatcapacityjk + 83,7 \uheatcapacityjk \right) \Delta \utemperature_\text{vatn}
+		&= 8354 \ujoule \\
+	\left( 2177 \uheatcapacityjk \right) \Delta \utemperature_\text{vatn}
+		&= 8354 \ujoule \\
+	\Delta \utemperature_\text{vatn}
+		&= \frac{8354 \ujoule}{ 2177 \uheatcapacityjk } \\
+		&= 3,84 \ukelvin \approx 3,84 \udegcent
+\end{align*}
+þá er lokahitastigið fyrir vatnið og ísinn
+\[
+	\utemperature_\text{loka} = 20 \udegcent - 3,84 \udegcent = 16,2 \udegcent
+\]
+\end{formalexample}
+
+\section{Varmafærsla}
+Þegar það er hitastigsmunur í efni þá leitast hitastigið á öllum stöðum í sama
+hitastigið. Þetta þýðir að innri varmi efnisins dreifist jafn um efnið, varmi
+hefur ekki tilhneigingu til að halda sér á sama stað ef það er hægt að leita til
+lægra hitastigs.

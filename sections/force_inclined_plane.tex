@@ -1,0 +1,117 @@
+% Forces inclining plane
+\section{Kraftar í skáplani}
+Þegar hlutur liggur í skáplani breytast aðstæðurnar fyrir því hvernig
+þyngdarkrafturinn verkar á sjálft. Í láréttu plani er hægt að miða út frá því
+að allur þyngdarkrafturinn verður þverkraftur, aftur á móti í skáplani er
+þverkrafturinn háður því hver hallinn er á planinu. Samhliða því myndast kraftur
+sem verkar samsíða planinu. Kraftarnir hafa stærðina:
+\begin{align}
+	\uforce_\text{s} 
+		&= \uforce_\text{g} \sin \theta \\
+	\uforce_\text{þver, ská} 
+		&= \uforce_\text{g} \cos \theta
+\end{align}
+Þá er hægt að byggja upp kraftmynd, þar sem við skoðum allt frá sjónarhorni
+plansins.
+\begin{figure}[h]
+	\centering
+	\def\iangle{25} % Angle of the inclined plane
+	\def\down{-90}
+	\def\arcr{0.45cm} % Radius of the arc used to indicate angles
+	\begin{tikzpicture}[
+		force/.style={>=latex,draw=blue,fill=blue, very thick},
+		forcecomp/.style={>=latex,draw=blue, densely dashed, fill=blue},
+		axis/.style={densely dashed,gray,font=\small},
+		m/.style={rectangle,draw=black,fill=gray,minimum size=0.3cm,thin},
+		M/.style={rectangle,draw,fill=lightgray,minimum size=0.3cm,thin},
+		scale=3
+	]
+	\draw[fill=lightgray, draw=black]
+		(0, 0) -- +(2.75,{2.75*tan(\iangle)}) -- +(2.75,0) -- cycle;
+	
+	\begin{scope}[rotate=\iangle, yshift=0.15cm, xshift={2.5cm/cos(\iangle)*0.75}, scale=1.0]
+		\node[M,transform shape] (M) {};
+		% Draw axes and help lines
+		% Forces
+		{[force,->]
+			% Assuming that Mg = 1. The normal force will therefore be cos(alpha)
+			\draw[force, ->] (M.south) ++(0.1,0) -- +(0,{cos(\iangle)}) node[above] {$\uforce_\text{þver, ská}$};
+			\draw[force, ->] (M.center) -- ++({-sin(\iangle)},0) node[left] {$\uforce_\text{s}$};
+			\draw[force, ->] (M.center) -- ++(0,{-cos(\iangle)}) node[right] {$\uforce_\text{g,ská}$};
+			\draw[force, ->] (M.center) -- ++({-sin(\iangle)},{-cos(\iangle)}) node[below] {$\uforce_\text{g}$};
+			\draw[forcecomp] (M.center) ++({-sin(\iangle)},0) -- +(0,{-cos(\iangle)});
+			\draw[forcecomp] (M.center) ++ (0,{-cos(\iangle)}) -- +({-sin(\iangle)},0);
+		}
+	\end{scope}
+	
+	\draw[solid,shorten >=0.5pt] (0,0) +(0:\arcr)
+		arc(0:\iangle:\arcr);
+	\node at (0+\iangle*0.5:1.25*\arcr) {$\theta$};
+	\end{tikzpicture}
+	\caption{Kraftar í skáplani, þar sem kassinn er áætlaður til að vera
+		dreginn samsíða planinu þá er heildarkrafturinn þvert á planið núll.
+		Sem þýðir $\uforce_\text{heild, þver} = \uforce_\text{þver, ská} 
+		- \uforce_\text{g,ská} = 0$ og gefur $ \uforce_\text{þver, ská} 
+		= \uforce_\text{g,ská}$.
+		}
+	\label{forces:inclinedplane:setup}
+\end{figure}
+
+\begin{formalexample}
+Kassi er togaður upp plan með jöfnum hraða í skáplani, núningsstuðull á milli
+skáplans og kassa er $\num{0.4}$, massi kassans er $\SI{5}{\kg}$ og halli skáplans
+er $\SI{15}{\degree}$. Hver er stærð togkraftsins?
+\\[4 ex]
+Þar sem kassinn er á jöfnum hraða þá er
+\[
+	\uforce_\text{heild} = \uforce_\text{tog} - \uforce_\text{s} -\uforce_\text{nún} = 0
+\]
+sem gefur að togkrafturinn er $\uforce_\text{tog} = \uforce_\text{s} + \uforce_\text{nún}$. Þar
+sem $\uforce_\text{nún} = \mu \uforce_\text{þver}$ og $\uforce_\text{g} = \umass \uacceleg$,
+þá er hægt að setja inn
+\begin{align*}
+	\uforce_\text{tog} &= \uforce_\text{s} + \uforce_\text{nún} \\
+		&= \uforce_\text{g} \sin \theta + \mu \uforce_\text{g} \cos \theta \\
+		&= \umass \uacceleg \sin \theta + \mu \umass \uacceleg \cos \theta \\
+		&= \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times \sin \left( \SI{15}{\degree} \right)
+			+ \num{0,4} \times \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times \cos \left( \SI{15}{\degree} \right) 
+			\\
+		&= \SI{3.2}{\N}
+\end{align*}
+það sem er gott að muna er að þessir kraftar reiknast einungis frá sjónarhorni
+plansins. Þannig séð er þetta nákvæmlega sama tilfelli eins þegar við skoðum
+kassa sem dreginn í láréttu nema það kemur aukakraftur og þverkrafturinn er
+flóknari í uppsetningu.
+\end{formalexample}
+
+\begin{formalexample}
+Kassi rennur niður skáplan, núningsstuðull á milli
+skáplans og kassa er $\num{0.25}$, massi kassans er $\SI{5}{\kg}$ og halli skáplansins
+er $\SI{15}{\degree}$. Hver er hröðun kassans?
+\\[4 ex]
+Núna er enginn togkraftur en núningskrafturinn verkar upp planið sem gefur
+\[
+	\uforce_\text{heild} = \uforce_\text{nún} - \uforce_\text{s} = \umass \uaccelea
+\]
+til að ná betri yfirsjón, þá er hægt er hægt að reikna þessa tvo krafta nú þegar
+\begin{align*}
+	\uforce_\text{nún} &= \mu \umass \uacceleg \cos \theta 
+		= \num{0.25} \times \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times \cos \left( \SI{15}{\degree} \right) 
+		= \SI{11.8}{\N} \\
+	\uforce_\text{s} &= \umass \uacceleg \sin \theta
+		= \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times \sin \left( \SI{15}{\degree} \right) 
+		= \SI{12.7}{\N}
+\end{align*}
+og við getum fundið hröðunina með
+\[
+	\uaccelea = \frac{\uforce_\text{nún} - \uforce_\text{s}}{\umass}
+		= \frac{ \SI{11.8}{\N} - \SI{12.7}{\N}  }{ \SI{5}{\kg} }
+		= - \SI{0.18}{\m\per\s\squared}
+\]
+neikvætt formerki táknar hér að kassinn rennur \emph{niður} skáplanið, þar sem
+jákvæð hreyfistefna er skilgreind sem \emph{upp} planið.
+\end{formalexample}

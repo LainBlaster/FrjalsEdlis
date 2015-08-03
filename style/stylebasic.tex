@@ -1,0 +1,168 @@
+% 
+% Style and all sorts of extra fun functions
+% 
+% 
+
+%\usepackage[strict]{changepage}
+\usepackage{changepage}
+
+% for formal definitions
+\usepackage{color}
+\usepackage{framed}
+
+% environment derived from framed.sty: see leftbar environment definition
+\definecolor{formalshade}{rgb}{0.90,0.90,1}
+\definecolor{formalshadedark}{rgb}{0.85,0.85,1}
+
+\newcounter{formalstatementcounter}
+%\arabic{formalexamplecounter}
+\setcounter{formalstatementcounter}{1}
+
+\newenvironment{formalstatement}{%
+  \def\FrameCommand{%
+    \fcolorbox{black}{formalshadedark}%
+  }%
+  \MakeFramed{\hsize 0.8\textwidth \FrameRestore}%
+  \noindent \textbf{Staðhæfing %
+	\arabic{formalstatementcounter}
+	} 
+  {\hspace{2pt}}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{5pt}{5pt}%
+  \vspace{4pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}%
+  \endMakeFramed%
+}
+
+\newenvironment{formalqoute}[1]{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{black}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent \textbf{Úrdráttur} {#1}%
+  {\hspace{2pt}}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\newenvironment{formalquestion}[1]{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{black}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent \textbf{Dæmi} {#1}%
+  {\hspace{2pt}}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\newenvironment{formalanswer}[1]{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{black}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent \textbf{Svar} {#1}%
+  {\hspace{2pt}}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% \newenvironment{formalexample}{%
+  % \def\FrameCommand{%
+    % \hspace{1pt}%
+    % {\color{black}\vrule width 2pt}%
+    % {\color{formalshade}\vrule width 4pt}%
+    % \colorbox{formalshade}%
+  % }%
+  % \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  % \noindent \textbf{Sýnidæmi} { xx }%
+  % {\hspace{2pt}}%
+  % \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  % \begin{adjustwidth}{}{7pt}%
+  % \vspace{2pt}\vspace{2pt}%
+% }
+% {%
+  % \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+% }
+
+\definecolor{shadecolor}{rgb}{0.95,0.95,1}
+% \newenvironment{formalexample}{%
+% \begin{shaded}%
+% %
+% }
+% {%
+% \end{shaded}%
+% }
+\newcounter{formalexamplecounter}
+%\arabic{formalexamplecounter}
+\setcounter{formalexamplecounter}{1}
+
+\newenvironment{formalexample}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{black}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\textbf{ Sýnidæmi \arabic{formalexamplecounter} } \\[0 pt]%
+  \noindent% disable indenting first paragraph
+  \vspace{2pt}%
+}
+{%
+  \vspace{2pt}%
+	\addtocounter{formalexamplecounter}{1}%
+	\endMakeFramed%
+}
+
+% Problems for end of chapter
+\newcounter{formalproblemcounter}
+%\arabic{formalexamplecounter}
+\setcounter{formalproblemcounter}{1}
+\newenvironment{formalproblem}{%
+}
+{%
+  %
+}
+
+
+\newenvironment{formaltext}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{black}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent \textbf{ Staðhæfing } %
+  {\hspace{2pt}}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}

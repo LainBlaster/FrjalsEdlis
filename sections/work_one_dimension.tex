@@ -1,0 +1,260 @@
+% work, energy definition
+\section{Vinna}
+Þegar kraftur verkar yfir vegalengd, þá kostar það orku eða leysir orku úr
+læðingi. Almennt er vinna til gagns ef hún er jákvæð og ógagn
+ef hún er neikvæð. Skilgreining á vinnu er:
+\begin{equation}
+	\uworkw = \uforce \Delta\ulengths
+\end{equation}
+þar sem $\uforce$ er krafturinn sem verkar og $\Delta\ulengths$ er vegalengdin
+sem krafturinn verkar yfir. Þetta gildir um alla krafta, líka heildarkraft, sem
+verður heildarvinna. Þá er sem dæmi hægt skoða þá krafta sem verka jafnt
+yfir sömu vegalengd, sem dæmi er hægt að:
+\begin{align*}
+	\uforce_\text{heild} &= \uforce_\text{tog} - \uforce_\text{nún} \\
+	\uforce_\text{heild}\Delta\ulengths &= 
+		\uforce_\text{tog}\Delta\ulengths - \uforce_\text{nún}\Delta\ulengths \\
+	\uworkw_\text{heild} &= \uworkw_\text{tog} - \uworkw_\text{nún}
+\end{align*}
+svo lengi sem kraftarnir verka yfir sömu vegalengd. Þetta svipar til að
+heildarkrafts, heildarorka er samansafn af öllum orkum sem vinna til gagns eða
+ógagns.
+%
+\begin{formalexample}
+Kassi er dreginn $\SI{5}{\m}$ yfir flöt, núningskrafturinn sem verkar á hreyfistefnunni er
+$\SI{10}{\N}$ og er togaður áfram með $\SI{25}{\N}$ krafti.
+Hver er heildarvinnan sem er framkvæmd?
+\\[4 ex]
+Vinnan sem er framkvæmd af togkraftinum er
+\[
+	\uworkw_\text{tog} = \uforce_\text{tog} \Delta\ulengths 
+		= \SI{25}{\N} \times \SI{5}{\m}
+		= \SI{125}{\J}
+\]
+og vinnan sem er framkvæmd af núningskraftinum er
+\[
+	\uworkw_\text{nún} = \uforce_\text{nún} \Delta\ulengths 
+		= \SI{10}{\N} \times \SI{5}{\m}
+		= \SI{50}{\J}
+\]
+þá er heildarvinnan
+\[
+	\uworkw_\text{heild} = \uworkw_\text{tog} - \uworkw_\text{nún}
+		= \SI{125}{\J} - \SI{50}{\J}
+		= \SI{75}{\J}
+\]
+þó það kostaði $\SI{125}{\J}$ af orku að toga kassann áfram, þá var ekki
+nema $\SI{75}{\J}$ sem gátu nýst í að koma kassanum áfram, afgangurinn fór í
+núning sem verkaði á móti hreyfingunni.
+\end{formalexample}
+
+\section{Skriðorka}
+Út frá skilgreiningu um vinnu er hægt að finna út samhengi á milli orku hlutar
+og hraða hlutar. Hlutur byrjar í kyrrstöðu ($\uspeed_0 = \SI{0}{\m\per\s}$) 
+og nær hraðanum $\uspeed$
+með jafnri hröðun og skoðum vinnuna sem fer í að koma hlutnum áfram með
+krafti $\uforce$:
+\begin{equation*}
+	\uworkw = \uforce_\text{heild} \Delta\ulengths
+		= \umass \uaccelea \Delta\ulengths
+		= \umass \left( \frac{\uspeed^2 - \uspeed^2_0}{2} \right)
+		= \frac{1}{2} \umass \uspeed^2
+		\equiv \ukinetick
+\end{equation*}
+sem er orkan sem hluturinn hefur náð við að hraða sér
+upp í hraðan $\uspeed$. Þetta er almennt kallað skriðorka
+\begin{equation}
+	K = \frac{1}{2} \umass \uspeed^2
+\end{equation}
+að endurtaka sömu útleiðslu nema í stað þess að byrja í kyrrstöðu þá er byrjað
+á hraðanum $\uspeed_0 \neq 0$
+\begin{equation*}
+	\uworkw
+		= \umass \uaccelea \Delta\ulengths
+		= \umass \left( \frac{\uspeed^2 - \uspeed^2_0}{2} \right)
+		= \frac{1}{2} \umass \uspeed^2 - \frac{1}{2} \umass \uspeed^2_0
+		= \ukinetick - \ukinetick_0
+		= \Delta\ukinetick
+\end{equation*}
+þá gefur breytingin í hraða vinnuna sem hefur verið framkvæmd á meðan
+hraðabreytingunni stóð. Þetta er kallað vinnulögmálið
+\begin{equation}
+	\uworkw = \Delta\ukinetick
+\end{equation}
+
+\section{Stöðuorka}
+Þegar hlutur ferðast í þyngdarsviði verkar kraftur á hann, það er ávallt
+þyngdarkraftur sem verkar í átt að miðju jarðar. Vinnan sem er framkvæmd að 
+\emph{minnsta kosti} til að færa hlut upp hæðarmismun á jöfnum hraða er samanlagt
+núll, þ.e.as. $\uforce_\text{heild} = \SI{0}{\N}$ sem þýðir $\uforce_\text{tog} = 
+\uforce_\text{g}$, sem gefur
+\begin{align*}
+	\uworkw_\text{heild} &= \uworkw_\text{tog} - \uworkw_\text{g} = \SI{0}{\J} \\
+	\uworkw_\text{tog} &= \uworkw_\text{g} = \umass \uacceleg \Delta\ulengthh
+\end{align*}
+sú vinna sem var framkvæmd við að færa hlutinn upp hæðarmismuninn $\Delta\ulengthh$. 
+Ef við sleppum hlutnum, þá fellur hann í frjálsu falli og við fáum vinnuna sem var
+framkvæmd leyst úr læðingi. Vinnan geymist í þyngdarsviðinu sem orka, og kallast
+\emph{geyminn orka} þar sem vinnan framkvæmd einungis til að breyta hæð hlutarins
+er endurheimtanleg. Dæmi um ógeymda orku, er núningur, vinnan sem er framkvæmd og
+fer í núning er ekki hægt að endurheimta á sama máta og úr þyngdarsviði. Sem
+gefur að orkan sem geymist í einsleitu þyngdarsviði jarðar hefur stærðina
+\begin{equation}
+	\Delta \upotentialu = \umass \uacceleg \Delta\ulengthh
+\end{equation}
+varðandi hæðarmismuninn $\Delta\ulengthh = \ulengthh_2 - \ulengthh_1$, þá
+þarf að velja \emph{núllpunkt} ($\ulengthh_1$) sem er upphafsstaðsetning. Þá 
+getur lokastaðsetning ($\ulengthh_2$) verið fyrir neðan eða ofan upphafstaðsetningu.
+
+\begin{formalexample}
+Lóð með massann $\SI{5}{\kg}$ er togað upp $\SI{10}{\m}$ hæð frá jörðu upp á húsþak.
+Hver er stöðuorka lóðsins séð frá jörðinni? En séð frá húsþakinu? Síðan er lóðinu
+sleppt, hver er stöðuorka lóðsins þá?
+\\[4 ex]
+Séð frá jörðu, þá er stöðuorkan
+\begin{align*}
+	\Delta \upotentialu &= \umass \uacceleg \Delta\ulengthh \\
+		&= \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times ( \SI{10}{\m} - \SI{0}{\m} ) \\
+		&= \SI{490}{\J}
+\end{align*}
+Séð frá húsþakinu, þá er stöðuorkan
+\begin{align*}
+	\Delta \upotentialu &= \umass \uacceleg \Delta\ulengthh \\
+		&= \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared} 
+			\times (\SI{0}{\m}) \\
+		&= \SI{0}{\J}
+\end{align*}
+Hins vegar þegar lóðið dettur niður
+\begin{align*}
+	\Delta \upotentialu &= \umass \uacceleg \Delta\ulengthh \\
+		&= \SI{5}{\kg} \times \SI{9.8}{\m\per\s\squared}
+			\times (-\SI{10}{\m} - \SI{0}{\m} ) \\
+		&= -\SI{490}{\J}
+\end{align*}
+Þetta þýðir í stuttu máli að lóðið eykur alltaf innri orku sína í formi stöðuorku
+þegar lóðið fer gagnstætt þyngdarsviði og þegar lóðið fylgir stefnu þyngdarsviðsins
+þá tapar lóðið innri orkunni sinni sem var geyminn í því.
+\end{formalexample}
+
+\section{Vélræn orka}
+Hlutur á hreyfingu hefur bæði skriðorku og stöðuorku, samanlagt eru þessar stærðir
+vélræn orka hlutars. Sem er 
+\begin{equation}
+	\umechenergy = \upotentialu + \ukinetick
+\end{equation}
+vélræn orka varðveitist ef það eru \emph{engir} núningskraftar eða aðrir kraftar en þeir
+sem eru gefnir af þyngdarsviði. Sem gefur mjög hentuga leið til að vita hver
+hraði hlutar ætti að vera ef orkan er varðveitt, samtímis er hægt að fá
+upplýsingar um tapið af orku sem fer í núning.
+%
+\begin{formalexample}
+Kúla er í $\SI{15}{\m}$ hæð yfir jörðu, kúlan er $\SI{10}{\kg}$. Hver er 
+stöðuorka kúlunar? Ef kúlan er látin falla,
+hversu mikil verður skriðorka og hraði kúlunnar við lendingu?
+\\[4 ex]
+Hæðarmismunurinn við jörðu er $\Delta\ulengthh = \SI{15}{\m}$, stöðuorkan er gefin til
+að vera
+\[
+	\Delta\upotentialu = \umass \uacceleg \Delta \ulengthh
+		= \SI{10}{\kg} \times \SI{9.8}{\m\per\s\squared}
+			\times \SI{15}{\m}
+		= \SI{1470}{\J}
+\]
+þar sem enginn núningur er á meðan kúlan fellur (áætlum hverfandi loftmótstaða) þá er
+ekkert tap á vélrænni orku sem þýðir að öll stöðuorkan breytist í skriðorku. Sem gefur
+að $\Delta\umechenergy = 0$, þeas. engin breyting sem gefur að
+\[
+	\Delta\upotentialu = \ukinetick = \SI{1470}{\J}
+\]
+sem er hægt að umskrifa til
+\[
+	\ukinetick = \frac{1}{2} \umass \uspeed^2 
+		\Leftrightarrow
+		\uspeed = \sqrt{\frac{2 \ukinetick}{\umass}} 
+			= \sqrt{\frac{\num{2} \times \SI{1470}{\J}
+				}{\SI{10}{\kg}}}
+			= \SI{17.1}{\m\per\s}
+\]
+sem er hraði kúlunnar rétt áður fyrir lendingu.
+\end{formalexample}
+%
+\begin{formalexample}
+Bíll hefur upphafshraðan $\SI{5}{\m\per\s}$ við toppinn á $\SI{40}{\m}$ háa brekku,
+bíllinn rennur vélvana (s.s. á þess að mótorinn hjálpar) niður brekkuna og hefur
+hraðan $\SI{20}{\m\per\s}$ við botninn á brekkunni. 
+Massi bílsins er $\SI{1000}{\kg}$
+og samanlagt rennur bíllinn vegalengdina $\SI{70}{\m}$.
+Hver er breytingin í vélrænni orku bílsins? Hversu mikið af orkunni fer í annað
+en hreyfiorku eða stöðuorku? Hver er meðalkrafturinn sem verkar á móti hreyfingu
+bílsins?
+\\[4 ex]
+Hæðarmismunurinn við jörðu er $\Delta\ulengthh = \SI{40}{\m}$, og upphafshraðinn
+er $\SI{5}{\m\per\s}$ áður en bíllinn rennur niður brekkuna sem þýðir að vélræn
+orka bílsins áður en hann rennur niður er
+\begin{align*}
+	\umechenergy_\text{fyrir} 
+		&= \umass \uacceleg \Delta\ulengthh + \frac{1}{2} \umass \left( \uspeed_1 \right)^2 \\
+		&= \SI{1000}{\kg} \times \SI{9.8}{\m\per\s\squared} \times \SI{40}{\m} 
+			+ \frac{1}{2} \times \SI{1000}{\kg} 
+				\times \left( \SI{5}{\m\per\s} \right)^2 \\
+		&= \SI{405}{\kJ}
+\end{align*}
+við botninn á brekkunni er vélræn orka bílsins
+\begin{align*}
+	\umechenergy_\text{eftir} 
+		&= \umass \uacceleg \Delta\ulengthh + \frac{1}{2} \umass \left( \uspeed_2 \right)^2 \\
+		&= \SI{1000}{\kg} \times \SI{9.8}{\m\per\s\squared} \times \SI{0}{\m} 
+			+ \frac{1}{2} \times \SI{1000}{\kg}
+				\times \left( \SI{20}{\m\per\s} \right)^2 \\
+		&= \SI{200}{\kJ}
+\end{align*}
+þá er breytingin í vélrænni orku
+\[
+	\Delta\umechenergy = \umechenergy_\text{eftir} - \umechenergy_\text{fyrir} 
+		= \SI{200}{\kJ} - \SI{405}{\kJ} = -\SI{205}{\kJ}
+\]
+sem er tapið af vélrænni orku, orkan hefur ekki varðveist á leiðinni niður og
+megnið (hátt í $50 \%$) hefur farið að reyna yfirvinna núning og mótstöðukrafta.
+Ef vélræn orka varðveitist ekki þá er kraftur sem er einhverskonar mótstöðukraftur
+við hreyfingu bílsins. Magnið af orku sem hefur verið gefið úr vélrænni orku er
+mikið og hefur farið í vinnu af mótstöðukröftum
+\[
+	\uworkw = - \uforce_\text{mót} \Delta\ulengths
+		\Leftrightarrow
+		\uforce_\text{mót} = - \frac{\uworkw}{\Delta\ulengths}
+			= - \frac{ -\SI{205}{\kJ} }{ \SI{70}{\m} }
+			= - \SI{2.93}{\kN}
+\]
+\end{formalexample}
+%
+\begin{formalexample}
+Mótor togar $\SI{250}{\kg}$ lyftu upp með 
+kraftinum $\SI{2.5}{\kN}$, skinnurnar sem lyftan fer
+eftir mynda núningskraft uppá $\SI{250}{\N}$. Lyftan 
+ferðast upp hæðina $\SI{25}{\m}$,
+hversu mikla orku þarf mótorinn að láta frá sér til að lyftan kemst upp?
+\\[4 ex]
+Orkan sem lyfta þarf að fá í form stöðuorku er
+\[
+	\upotentialu = \umass \uacceleg \ulengthh 
+		= \SI{250}{\kg} \times \SI{9.8}{\m\per\s\squared}
+			\times \SI{25}{\m}
+		= \SI{61250}{\J}
+\]
+vinnan sem núningur framkvæmir gagnsætt mótori er
+\[
+	\uworkw = \SI{250}{\N} \times \SI{25}{\m}
+		= \SI{6250}{\J}
+\]
+þá er heildarvinna jöfn orkunni sem fór í að toga lyftuna upp
+\begin{align*}
+	\uworkw_\text{heild} &= \uworkw_\text{tog} - \uworkw_\text{nún}\\
+	\uworkw_\text{tog} &= \uworkw_\text{heild} + \uworkw_\text{nún}\\
+		&= \SI{61250}{\J} + \SI{6250}{\J} \\
+		&= \SI{67500}{\J}
+\end{align*}
+Þá þarf mótorinn að gefa minnst þetta magn af orku til þess að lyftan komist upp
+$\SI{25}{\m}$.
+\end{formalexample}
+%

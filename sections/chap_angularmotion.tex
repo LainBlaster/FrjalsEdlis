@@ -1,0 +1,347 @@
+% Chap angular motion
+\chapter{Hringhreyfing}
+Þegar hlutir hreyfast í hringhreyfingu þarf að taka mið af því hvernig hnitakerfið er
+uppsett. Í hefðbundnu rétthyrndu hnitakerfi þarf að lýsa hreyfingunni með vigrum
+og í tvívídd. Hringhreyfing er líka eitt af þeim svæðum þar sem skiptir máli
+hvar upphafsstaðsetning hnitakerfsins er. Þetta þýðir að við getum upplifað
+sömu aðstæður sem kraftar verka á hluti á nokkra mismunandi og oft furðulega
+máta. Sem hluti af því þarf að skilgreina tregðukerfi og heildarkraftinn
+uppá nýtt.
+
+\section{Tregðukerfi}
+Þegar við erum í lyftu fáum við upplifun að það er kraftur sem togar okkur
+niður, á þvert við tilfinninguna okkar þá er reyndar enginn kraftur sem togar
+okkur niður. Heldur er lyftan að ýta okkur upp og við erum að upplifa kraftinn
+sem kemur við að breyta hraða okkar. Séð utan frá, þá er lyftan að ýta okkur
+upp, síðan er gagn kraftur á milli okkar og lyftunar, þá er heildarkrafturinn
+jákvæður og stefnir upp. S.s. skrifað í kröftum
+\begin{align*}
+	\uforce_\text{heild} 
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta} - \uforce_\text{g, persóna}\\
+	(\umass_\text{lyfta} + \umass_\text{persóna}) \uaccelea
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta} - \uforce_\text{g, persóna}\\
+\end{align*}
+þar sem $\uforce_\text{heild, lyfta}$ er krafturinn sem lyftan getur lyft sér með
+án þess að hafa farþega. Ef við skoðum kraftinn sem verkar á okkur í lyftunni
+\begin{align*}
+	\uforce_\text{heild, persóna}
+		&= \uforce_\text{þver} - \uforce_\text{g} \\
+	\umass_\text{persóna} \uaccelea
+		&= \uforce_\text{þver} - \uforce_\text{g} \\
+	\uforce_\text{þver}
+		&= \umass_\text{persóna} \uaccelea + \uforce_\text{g} \\
+\end{align*}
+þverkrafturinn $\uforce_\text{þver}$ er stærri þyngdarkrafturinn, og þverkraftur
+er gagnkraftur sem verkar gagnstætt á lyftubotninn. Þar sem persónan helst á
+gólfi lyftunar, þá er gagnkrafturinn sem verkar á lyftuna jafn stór og gagnstæður
+þverkrafts persónunnar. Þá er heildkrafturinn fyrir lyftuna staka
+\begin{align*}
+	\uforce_\text{heild, lyfta}
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta} - \uforce_\text{þver} \\
+	\umass_\text{lyfta} \uaccelea
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta} - (\umass_\text{persóna} \uaccelea + \uforce_\text{g} ) \\
+	\umass_\text{lyfta} \uaccelea
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta} - \umass_\text{persóna} \uaccelea - \uforce_\text{g} \\
+	\umass_\text{lyfta} \uaccelea + \umass_\text{persóna} \uaccelea
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta}  - \uforce_\text{g} \\
+	(\umass_\text{lyfta} + \umass_\text{persóna}) \uaccelea
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta}  - \uforce_\text{g} \\
+	\uforce_\text{heild, allt}
+		&= \uforce_\text{tog, lyfta} - \uforce_\text{g, lyfta}  - \uforce_\text{g} \\
+\end{align*}
+sem sagt, þó að við blöndum saman tveim ,,kerfum'', þá er ennþá sama niðurstaða
+eins og það væri fyrir utan lyftuna. 
+
+Þegar við erum í hringhreyfingu þá er heildarkrafturinn sem verkar á hlut með
+stefnuna í átt að miðju hringsins. Annars væri hluturinn að fara beint meðfram
+þeirri stefnu sem hraði hlutarins hefur á hringferlinum. S.s. þá er heildarkrafturinn
+sem verkar á hlut er
+\begin{equation}
+	\bar\uforce_\text{heild, hring} = \bar\uforce_\text{mið}
+\end{equation}
+þá er líka mikilvægt að gera sér grein fyrir því að heildarkrafturinn
+er líka
+\[
+	\bar\uforce_\text{heild, hring} 
+		= \bar\uforce_\text{mið}
+		= \umass \bar\uaccelea_\text{mið}
+		= \sum \text{ summa krafta á hlut }
+\]
+sem leiðir af sér að hröðunin sem hluturinn hefur verður að stefna í átt að
+miðju hringferlsins. Þá þarf einmitt að finna út hvernig vigurstærðin 
+$\bar \uaccelea$ lítur út, sem er kölluð miðsóknarhröðun.
+
+\section{Miðsóknarhröðun}
+Í þessum hluta er markmiðið að sýna stærð miðsóknarhröðunnar er gefin til að vera
+\begin{equation}
+	\uaccelea_\text{mið} = \frac{\uspeed}{\ulengthr}
+\end{equation}
+fyrst til að komast að þessari niðurstöðu þarf að skilgreina hringferil
+\begin{align*}
+	\bar \ulengthr = 
+		\left( 
+			\begin{array}{c}
+				\ulengthr \cos( \theta(\utime) )\\
+				\ulengthr \sin( \theta(\utime) )\\
+			\end{array}
+		\right)
+\end{align*}
+þar sem radíus hringsins er $\ulengthr$ og hornið er $\theta(\utime)$
+en hins vegar er hornið sem hluturinn ferðast meðfram hringferilunum er háð
+tíma, nánar tiltekið
+\[
+	\theta = \omega \utime + \theta_0
+\]
+þar sem $\omega$ er hornhraði, þeas hversu margar gráður/radíanar hornið breytist
+með á hverri sekúndu, upphafshornið $\theta_0$ er venjulega núll. 
+Þá verður staðsetningin $\bar \ulengthr$ meðfram hringferilunum
+\begin{align*}
+	\bar \ulengthr = 
+		\left( 
+			\begin{array}{c}
+				\ulengthr \cos( \omega \utime )\\
+				\ulengthr \sin( \omega \utime)\\
+			\end{array}
+		\right)
+\end{align*}
+og hraði er $\bar \uspeed = \frac{d \bar \ulengthr}{ d \utime}$, sem gefur
+\begin{align*}
+	\bar \uspeed = 
+		\left( 
+			\begin{array}{c}
+				- \ulengthr \omega \sin( \omega \utime )\\
+				\ulengthr \omega \cos( \omega \utime)\\
+			\end{array}
+		\right)
+\end{align*}
+þá er stærð hraðavigursins
+\begin{align*}
+	\left\| \bar \uspeed \right\| &= 
+		\left\| \left( 
+			\begin{array}{c}
+				- \ulengthr \omega \sin( \omega \utime )\\
+				\ulengthr \omega \cos( \omega \utime)\\
+			\end{array}
+		\right)
+		\right\| \\
+	 &= 
+		\sqrt{ \left( - \ulengthr \omega \sin( \omega \utime ) \right)^2 
+			+ \left( \ulengthr \omega \cos( \omega \utime) \right)^2 }
+		\\
+		&= \ulengthr \omega 
+			\sqrt{ \sin^2( \omega \utime ) +  \cos^2( \omega \utime ) } \\
+		&= \ulengthr \omega 
+			\sqrt{ 1 } \\
+		&= \ulengthr \omega
+\end{align*}
+sem er hægt að skrifa sem
+\[
+	\uspeed = \left\| \bar \uspeed \right\| = \ulengthr \omega
+\]
+þetta er einungis stærð vigursins, stefnan er gefin við $\bar \uspeed$. Hröðun
+er skilgreind sem breyting hraða á móti tíma, eða $\bar \uaccelea =
+\frac{ d \bar \uspeed }{d \utime}$. Þá er hröðun sem vigurstærð
+\begin{align*}
+	\bar \uspeed = 
+		\left( 
+			\begin{array}{c}
+				- \ulengthr \omega^2 \cos( \omega \utime )\\
+				- \ulengthr \omega^2 \sin( \omega \utime)\\
+			\end{array}
+		\right)
+\end{align*}
+þá er stærð hraðavigursins 
+\begin{align*}
+	\left\| \bar \uaccelea_\text{mið} \right\| &= 
+		\left\| \left( 
+			\begin{array}{c}
+				- \ulengthr \omega^2 \cos( \omega \utime )\\
+				- \ulengthr \omega^2 \sin( \omega \utime)\\
+			\end{array}
+		\right)
+		\right\| \\
+	 &= 
+		\sqrt{ \left( - \ulengthr \omega^2 \cos( \omega \utime ) ) \right)^2 
+			+ \left( - \ulengthr \omega^2 \sin( \omega \utime) \right)^2 }
+		\\
+		&= \ulengthr \omega^2 
+			\sqrt{ \sin^2( \omega \utime ) +  \cos^2( \omega \utime ) } \\
+		&= \ulengthr \omega^2 
+			\sqrt{ 1 } \\
+		&= \ulengthr \omega^2
+\end{align*}
+sem er hægt að skrifa sem
+\[
+	\uaccelea_\text{mið} = \left\| \bar \uaccelea_\text{mið} \right\| = \ulengthr \omega^2
+\]
+og þar sem hornhraði er $\omega = \frac{\uspeed}{\ulengthr}$ þá er
+\[
+	\uaccelea_\text{mið} = \ulengthr \left( \frac{\uspeed}{\ulengthr} \right)^2
+		= \frac{\uspeed^2}{\ulengthr}
+\]
+sem sýnir að stærð miðsóknarhröðunar er það sem var fyrst haldið fram. Stefna
+miðsóknarhröðunnar er hinsvegar alltaf í átt að miðju hringsins, sem er reyndar
+ástæðan fyrir nafninu \emph{miðsóknar}hröðun.
+
+\subsection{Tíðni og hringhreyfing}
+Hornhraði er stærð sem er skilgreind til að vera radíanar á sekúndu, en tíðni er
+skilgreind til að vera snúningar á sekúndu. Þá er samhengið á milli tíðni
+og hornahraða
+\begin{equation}
+	\omega = 2 \pi \ufrequency
+\end{equation}
+þá er hægt að umskrifa miðsóknarhröðun á marga máta
+\begin{align*}
+	\uaccelea_\text{mið} &= 
+		\frac{\uspeed^2}{\ulengthr}\\
+	 &= 
+		\ulengthr \omega^2\\
+	 &=
+		4 \pi^2 \ufrequency^2 \ulengthr
+\end{align*}
+og umferðartíminn fyrir hlut í hringhreyfingu er
+\[
+	\uorbitaltime = \frac{2\pi}{\omega}
+\]
+umferðartími er tíminn sem það tekur hlutinn að fara \emph{einn hring}. T.d.
+er umferðartími jarðar $\approx 1 \uyear$.
+
+\section{Miðsóknarkraftur}
+Þar sem heildarkrafturinn sem verkar á hlut þarf að vera jafn miðsóknarkrafti, 
+þá er
+\begin{equation}
+	\uforce_\text{heild} = \uforce_\text{mið} = \umass \frac{\uspeed^2}{\ulengthr}
+\end{equation}
+sem er hægt að setja upp á mismunandi máta. Þá verður heildarkrafturinn séð frá
+tregðukerfi sem er utan hringhreyfingar. Það verður vandamál að setja upp
+alla möguleika sem geta lýst kröftunum á meðan hringhreyfingu stendur. Sýnidæmi
+eru hentug til að lýsa heildakröftum og miðsóknarkrafti.
+\begin{formalexample}
+Kúla er í hringhreyfingu í láréttu plani, massi kúlunnar er $2 \ukilo\ugramm$ og
+lengd taugarinnar $1,2 \umeter$.
+Taugin (bandið) sem heldur kúlunni þolir mest $20 \unewton$ kraft áður en taugin
+slitnar. Hver er hámarkshraði kúlunnar áður en taugin slitnar?
+\\[4 ex]
+Heildarkrafturinn sem verkar á hlutinn er
+\[
+	\uforce_\text{heild} 
+		= \uforce_\text{mið} 
+		= \umass \frac{\uspeed^2}{\ulengthr}
+		= \uforce_\text{taug}
+\]
+sem er hægt leysa sem
+\begin{align*}
+	\umass \frac{\uspeed^2}{\ulengthr} &= 
+		\uforce_\text{taug}\\
+	2 \ukilo\ugramm \cdot \frac{\uspeed^2}{1,2 \umeter} &= 
+		20 \unewton\\
+	\uspeed^2 &= 
+		\frac{1,2 \umeter \cdot 20 \unewton }{ 2 \ukilo\ugramm }\\
+	\uspeed &= 
+		\sqrt{ \frac{1,2 \umeter \cdot 20 \unewton }{ 2 \ukilo\ugramm } }\\
+	 &= 
+		3,46 \uspeedms
+\end{align*}
+sem er hámarkshraði áður en bandið slitnar.
+\end{formalexample}
+\begin{formalexample}
+Kúla er í hringhreyfingu í lóðréttu plani, massi kúlunnar er $2 \ukilo\ugramm$,
+lengd taugarinnar $1,2 \umeter$ og hraði kúlunnar er $5 \uspeedms$.
+Hver er togkrafturinn í tauginn þegar kúlan er í toppnum eða botni hringhreyfinginnar?
+\\[4 ex]
+Heildarkraftuinn hefur núna líka þyngdarkraft sem verkar á taugina við toppinn
+\begin{align*}
+	\uforce_\text{heild} 
+		= \uforce_\text{taug} + \uforce_\text{g}\\
+	\umass \frac{\uspeed^2}{\ulengthr} &= 
+		\uforce_\text{taug} + \umass \uacceleg\\
+	2 \ukilo\ugramm \cdot \frac{\left( 5 \uspeedms \right)^2}{1,2 \umeter} &= 
+		\uforce_\text{taug} + 2 \ukilo\ugramm \cdot 9,8 \uaccelems\\
+	41,7 \unewton &= 
+		\uforce_\text{taug} + 19,6 \unewton\\
+	\uforce_\text{taug} &= 
+		41,7 \unewton - 19,6 \unewton\\
+	 &= 
+		22,1 \unewton
+\end{align*}
+aftur á móti við botninn á hringferlinum þá er heildarkrafturinn
+\begin{align*}
+	\uforce_\text{heild} 
+		= \uforce_\text{taug} - \uforce_\text{g}\\
+	\umass \frac{\uspeed^2}{\ulengthr} &= 
+		\uforce_\text{taug} - \umass \uacceleg\\
+	2 \ukilo\ugramm \cdot \frac{\left( 5 \uspeedms \right)^2}{1,2 \umeter} &= 
+		\uforce_\text{taug} - 2 \ukilo\ugramm \cdot 9,8 \uaccelems\\
+	41,7 \unewton &= 
+		\uforce_\text{taug} - 19,6 \unewton\\
+	\uforce_\text{taug} &= 
+		41,7 \unewton + 19,6 \unewton\\
+	 &= 
+		61,3 \unewton
+\end{align*}
+togkrafturinn verður þá að vera stærri við botninn en við toppinn á hringferlinum.
+\end{formalexample}
+\begin{formalexample}
+Kúla er í hringhreyfingu í lóðréttu plani,
+lengd taugarinnar $1,2 \umeter$.
+Hver er minnsti hraði sem hægt er að sleppa með til að halda kúlunni í hringhreyfingu?
+\\[4 ex]
+Til að finna minnsta hraðan þá þarf að finna nákvæmlega þann punkt sem
+miðsóknarkraftur er ekki undir áhrifum togkrafts taugarinnar og einungis
+þyngdarkraftur hefur áhrif á hlutinn. S.s. $\uforce_\text{taug} = 0$ og
+í toppstöðu getur þyngdarkrafturinn búið til kraft sem verkar á hlutinn og
+sér til þess að hann heldur hringhreyfingu
+\begin{align*}
+	\uforce_\text{heild} 
+		&= \uforce_\text{g}\\
+	\umass \frac{\uspeed^2}{\ulengthr} &= 
+		\umass \uacceleg\\
+	\frac{\uspeed^2}{\ulengthr} &= 
+		\uacceleg\\
+	\frac{\uspeed^2}{1,2 \umeter} &= 
+		9,8 \uaccelems\\
+	\uspeed^2 &= 
+		9,8 \uaccelems \cdot 1,2 \umeter \\
+	\sqrt{ \uspeed^2 }  &= 
+		\sqrt{ 9,8 \uaccelems \cdot 1,2 \umeter } \\
+	\uspeed  &= 
+		\sqrt{ 9,8 \uaccelems \cdot 1,2 \umeter } \\
+	&=
+		3,43 \uspeedms
+\end{align*}
+\end{formalexample}
+\begin{formalexample}
+Lóð hengur í bandi, massi lóðsins
+er $5 \ukilo\ugramm$. Hver er krafturinn í bandinu þegar lóðið er
+dregið upp í $90 \udeg$ horn upp og látið falla?
+\\[4 ex]
+Það er hægt að finna hraðan sem lóðið hefur þegar það er komið í lægstu stöðu eftir
+að því er sleppt frá $90\udeg$ horninu. Í hæðstu stöðu er lóðið
+í $\ulengthr$ hæð, síðan dettur lóðið og öll stöðuorka hlutarins er
+færð í skriðorku
+\begin{align*}
+	\umass \uacceleg \ulengthr
+		&= \frac{1}{2} \umass \uspeed^2\\
+	\uacceleg \ulengthr 
+		&= \frac{1}{2} \uspeed^2\\
+	\uspeed^2 
+		&= 2 \uacceleg \ulengthr
+\end{align*}
+heildkrafturinn á bandið og lóðið við botninn á hringhreyfingu lóðsins er
+\begin{align*}
+	\uforce_\text{heild}
+		&= \uforce_\text{taug} - \uforce_\text{g}\\
+	\umass \frac{\uspeed^2}{\ulengthr}
+		&= \uforce_\text{taug} - \umass \uacceleg\\
+	\umass \frac{2 \uacceleg \ulengthr}{\ulengthr}
+		&= \uforce_\text{taug} - \umass \uacceleg\\
+	2 \umass \uacceleg
+		&= \uforce_\text{taug} - \umass \uacceleg\\
+	\uforce_\text{taug}
+		&= 2 \umass \uacceleg + \umass \uacceleg\\
+		&= 3 \umass \uacceleg \\
+		&= 3 \cdot 5 \ukilo\ugramm \cdot 9,8 \uaccelems \\
+		&= 147 \unewton
+\end{align*}
+sem er krafturinn sem taugin upplifir.
+\end{formalexample}

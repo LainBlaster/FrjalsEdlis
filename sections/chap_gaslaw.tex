@@ -1,0 +1,107 @@
+\chapter{Gasjafnan}\label{section:thermodynamics:idealgas}
+Gas getur fundist í mörgum ástöndum, þá er gas sem er hagar sér eins og það er
+samsett af kúlum sem hafa næga hreyfiorku til að yfirvinna bindisorkuna
+sem gasatómin geta haft sín á milli. Þá kallast slíkt gas, \emph{kjörgas}
+þar sem það er bara stjórnað af hitastigi, þrýstingi og rúmmáli. Þá skiptir
+ekki máli hvort að um er að ræða atóm eða sameindir, svo lengi sem eigin
+hreyfiorka markvert stærri en bindiorka á milli gaseindana. Þá er gasjafnan
+gefin við
+\begin{align}
+	\upressure \uvolume &= \unumberN \uboltzmann \utemperature
+\end{align}
+líka er til önnur útgáfa sem mikið notuð í efnafræði
+\begin{align}
+	\upressure \uvolume &= \unumbern \ugasconstant \utemperature
+\end{align}
+Bæði tilvikin eru gaslögmálið fyrir kjörgas, þess ber að merkja að
+þrýstingur margfaldaður með rúmmáli hefur sömu einingu og orka.
+Reyndar er þetta orkan sem kjörgas hefur í samræmi við hitastigið sem gasið
+finnst við. Fyrri jafnan skoðar orkuna á hverri eind sem finnst í gasinu á meðan
+seinni skoðar magnið af orku sem finnst í einu móli af kjörgasi.
+Þá er fasti Boltzmanns $\uboltzmann = \ugasconstantjk$ og gasfastinn
+$\ugasconstant = \ugasconstantjkm$. 
+
+\begin{formalexample}
+	Ílát sem er með rúmmálið $0,1 \, \si{\metre\cubed}$ inniheldur 
+	$\num{8,5} \, \si{\mole}$ af
+	kjörgasi, þrýstingurinn í ílátinu er 
+	$\num{2e5} \, \si{\pascal}$. Hvert er
+	hitastigið í flöskunni?
+	\\[4 ex]
+	Hægt er að nota gasjöfuna með gasfastanum til að einangra hitan úr
+	kjörgasjöfnunni
+	\begin{align*}
+		\num{2e5} \, \si{\pascal} \times 0,1 \, \si{\metre\cubed}
+			&= \num{8,5} \, \si{\mole} \times 
+				\ugasconstantjkm \times \utemperature 
+			&& \Leftrightarrow \\
+		\utemperature  &= \frac{ \num{2e5} \, \si{\pascal} \times 0,1 \, 
+				\si{\metre\cubed} }
+			{ \num{8,5} \, \si{\mole} \times \ugasconstantjkm } \\
+		&= 283 \si{\kelvin} \\
+		&= 10 \si{\celsius}
+	\end{align*}
+	sem þýðir að hitastigið er að meðaltali í ílátinu $10 \si{\celsius}$
+\end{formalexample}
+Þegar Boltzmanns fastinn er
+notaður er talað um meðalorku per atóm í kjörgasi. 
+Hægt er að lesa fastan $\uboltzmann = \ugasconstantjk$ sem 
+$1,38 \si{\joule}$ af orku á hvert einasta atóm í gasinu fyrir hvert Kelvin.
+\begin{formalexample}
+	Loftþéttur stálkassi inniheldur $\num{5e24}$ atóm, þrýstingurinn í kassanum
+	er mældur til að vera $\num{3e5} \, \si{\pascal}$ og hitastigið er mælt til
+	að vera $\num{320} \, \si{\kelvin}$. Áætlaðu að gasið í kassanum sé
+	kjörgas, finndu rúmmál kassans.
+	\\[4 ex]
+	Hægt er að nota gasjöfuna til að finna rúmmálið á kassanum með
+	\begin{align*}
+		\num{3e5} \, \si{\pascal} \times \uvolume
+			&= \num{5e24} \times \ugasconstantjk \times \num{320} \, \si{\kelvin}
+			&& \Leftrightarrow \\
+		\uvolume
+			&= \frac{ 
+				\num{5e24} \times \ugasconstantjk \times 
+				\num{320} \, \si{\kelvin}
+				}{
+				\num{3e5} \, \si{\pascal}
+				}
+			\\
+			&= \frac{ 
+				\num{2.2e4} \, \si{\joule}
+				}{
+				\num{3e5} \, \si{\pascal}
+				}
+			\\
+			&= \num{0.073} \, \si{\metre\cubed} \\
+			&= \num{73} \, \si{\deci\metre\cubed} \\
+			&= \num{73} \, \si{\liter}
+	\end{align*}
+	Sem þýðir að kassinn fyllir $\num{73} \, \si{\liter}$ af rúmmáli. Hins vegar
+	er hægt að finna út afhverju $\si{\joule\per\pascal} = \si{\metre\cubed}$,
+	þegar við skoðum eininguna $\si{\joule} = \si{\newton\metre}$ og eininguna
+	$\si{\pascal} = \si{\newton\per\metre\squared}$ sem gefur
+	\begin{align*}
+		\frac{\si{\joule}}{\si{\pascal}} 
+			&= 
+			\frac{\si{\cancel\newton\metre}}{
+				\si{\cancel\newton\per\metre\squared}}
+			= 
+			\frac{\si{\metre}}{
+				\si{\per\metre\squared}}
+			= 
+			\si{\metre\cubed}
+	\end{align*}
+\end{formalexample}
+Það gildir líka fyrir gaslögmálið að orkan sem gasið hefur dreifist jafn í gegnum
+lokað kerfi. Ef rúmmál, hiti eða þrýstingur breytist í lokuðu kerfi er orkan
+óbreytt, sem þýðir að hægt er að setja
+\begin{align}
+	\frac{\upressure_1 \uvolume_1}{\utemperature_1}
+		= \unumberN \uboltzmann
+		= \unumbern \ugasconstant
+		= \frac{\upressure_2 \uvolume_2}{\utemperature_2}
+\end{align}
+Ef tvö (eða fleiri) kerfi eru tengd saman þá hækkar orkan ekki en hins vegar 
+breytist þrýstingur, rúmmál eða hitastig þegar gasið jafnast út. Eitthvað
+af stærðunum sem stýra gildunum verða breytast annars hverfur orkan úr
+kerfinu!
